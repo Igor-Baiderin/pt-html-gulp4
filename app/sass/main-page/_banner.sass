@@ -1,0 +1,191 @@
+//Стилизация секции banner
+.banner
+  margin-top: 70px
+  margin-bottom: 112px
+  &-slider
+    position: relative
+    widows: 100%
+    margin-top: 52px
+    &__wrapper
+      background: linear-gradient(93.16deg, #F9F9F9 0%, #E6FFED 100%)
+      display: block
+      min-height: 390px
+      &--blue
+        background: linear-gradient(93.16deg, #F9F9F9 0%, #E6F9FF 100%)
+    &__img
+      position: absolute
+      right: 0
+      top: -45px
+    &__info
+      position: absolute
+      display: flex
+      flex-direction: column
+      top: 58px
+      left: 54px
+    &__title
+      margin-bottom: 20px
+      @extend %title-font
+      font-size: 40px
+      line-height: 48px
+    &__text
+      margin-bottom: 5px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #898989
+    &__span
+      font-family: 'Gilroy-700'
+      font-weight: 700
+      font-size: 40px
+      line-height: 48px
+      color: $red
+    &__link
+      margin-top: 42px
+      padding-right: 20px
+      &::after
+        width: 225px
+.slider
+  &__arrow
+    position: absolute
+    border: none
+    background-color: transparent
+    z-index: 1
+    &--left
+      left: -76px
+      bottom: 52%
+      transform: translateY(100%)
+    &--right
+      top: 57%
+      transform: translateY(-100%)
+      right: -73px
+.slick
+  &-dots
+    position: absolute
+    font-size: 0
+    display: flex
+    bottom: 40px
+    left: 53px
+    button
+      transition: all .3s
+      margin-right: 12px
+      width: 8px
+      height: 8px
+      border: none
+      border-radius: 50%
+      background-color: #E4E4E4
+    & .slick-active
+      button
+        transition: all .3s
+        border-radius: 20px
+        background-color: $red
+        width: 32px
+
+@media (max-width: 1400px)
+  .banner
+    &-slider
+      &__link
+        margin-top: 12px
+      &__info
+        top: 55px
+      &__img
+        right: -46px
+      &__text
+        font-size: 18px
+        line-height: 23px
+  .slider
+    &__arrow
+      &--left
+        left: -43px
+      &--right
+        right: -43px
+  .slick
+    &-dots
+      bottom: 25px
+
+@media (max-width: 1200px)
+  .banner
+    &-slider
+      &__img
+        right: -212px
+
+@media (max-width: 992px)
+  .banner
+    &-slider
+      &__img
+        right: -55px
+        width: 400px
+        top: 116px
+
+@media (max-width: 767px)
+  .banner
+    &-slider
+      &__info
+        top: 126px
+      &__img
+        right: 121px
+        top: -55px
+
+@media (max-width: 576px)
+  .banner
+    margin-bottom: 70px
+    &-slider
+      &__info
+        top: 150px
+      &__img
+        width: 320px
+        right: 50px
+      &__title
+        font-size: 26px
+        line-height: 35px
+      &__text
+        font-size: 16px
+        line-height: 20px
+      &__span
+        font-size: 26px
+        line-height: 35px
+
+@media (max-width: 430px)
+  .banner
+    &-slider
+      &__img
+        right: 5px
+        top: -60px
+      &__info
+        top: 105px
+        left: 20px
+      &__title
+        margin-bottom: 10px
+      &__text
+        margin-bottom: 25px
+      &__link
+        margin-top: 20px
+  .slider
+    &__arrow
+      &--left
+        left: 0
+        bottom: 70px
+      &--right
+        right: 0
+        top: 94%
+  .slick
+    &-dots
+      left: 31%
+  .best
+    &-card
+      &__link
+        padding: 15px 90px
+    & .banner
+      &-slider
+        &__arrow
+          &--left
+            left: 20px
+            bottom: 39px
+          &--right
+            right: 12px
+            top: 101%
+    &__link
+      margin-left: 70px
+    & .slick
+      &-dots
+        left: 41%
+        bottom: -5px

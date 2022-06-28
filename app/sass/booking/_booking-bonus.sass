@@ -1,0 +1,71 @@
+.booking
+  &-bonus
+    display: flex
+    justify-content: space-between
+    padding: 45px
+    margin-top: 60px
+    background-color: #F6FFF5
+    border-radius: 20px
+    &__info
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__num
+      margin-bottom: 15px
+      color: #29BC26
+    &__text
+      margin-bottom: 25px
+    &__wrapper
+      display: flex
+      gap: 30px
+    &__button
+      width: 310px
+      padding: 15px 15px 18px
+      border: none
+      border-radius: 10px
+      font-size: 16px
+      line-height: 22px
+      //lh: 22px
+      &--green
+        color: #fff
+        filter: drop-shadow(0px 10px 15px rgba(78, 224, 41, 0.3))
+        background-color: #29BC26
+
+@media (max-width: 1200px)
+  .booking
+    &-bonus
+      &__button
+        width: 280px
+      &__wrapper
+        gap: 15px
+
+@media (max-width: 992px)
+  .booking
+    &-bonus
+      padding: 30px
+      flex-direction: column-reverse
+      align-items: center
+      &__wrapper
+        flex-direction: column
+      &__button
+        width: 100%
+      &__img
+        width: 80px
+        height: 80px
+      &__info
+        text-align: center
+
+@media (max-width: 576px)
+  .booking
+    &-bonus
+      &__num
+        font-size: 16px
+        line-height: 20px
+      &__text
+        font-size: 16px
+        line-height: 20px
+      &__button
+        padding: 15px 5px 18px
+        width: 100%
+        font-size: 16px
+        line-height: 20px

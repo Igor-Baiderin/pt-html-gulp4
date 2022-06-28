@@ -1,0 +1,232 @@
+.status
+  &-entry
+    display: flex
+    flex-direction: column
+    &--hidden
+      display: none
+    &__title
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__form
+      display: flex
+      justify-content: space-between
+      gap: 20px
+    &__input
+      width: 100%
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      min-width: 245px
+      input
+        padding: 12px 17px 12px 25px
+        width: 100%
+        &::placeholder
+          color: #898989
+    &__button
+      padding: 13px 31px 15px 29px
+      min-width: 196px
+  &-wrapper
+    &--hidden
+      display: none
+  &__title
+    margin-bottom: 60px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &-main
+    margin-bottom: 60px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: #898989
+    &__item
+      margin-bottom: 20px
+      display: flex
+    &__number
+      margin-left: 30px
+      color: $red
+    &__state
+      margin-left: 25px
+      padding: 4px 20px
+      font-size: 16px
+      line-height: 22px
+      color: #fff
+      border-radius: 7px
+      &--hidden
+        display: none
+      &--confirmed
+        background-color: #29BC26
+      &--waiting
+        background-color: #E0BC3C
+      &--paid
+        background-color: #006CB5
+    &__name
+      color: $black
+      margin-left: 17px
+  &-list
+    margin-top: 50px
+    &__item
+      display: flex
+      position: relative
+      padding-bottom: 30px
+      padding-top: 21px
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $grey
+        bottom: 0
+        left: 0
+        right: 0
+    &__title
+      @extend %title-font
+      min-width: 176px
+      width: 176px
+      margin-right: 54px
+      font-size: 20px
+      line-height: 28px
+  &-price
+    margin-top: 60px
+    @extend %title-font
+    display: flex
+    font-size: 20px
+    line-height: 28px
+    color: #898989
+    &__num
+      margin-left: 27px
+      color: #29BC26
+  &-buttons
+    margin-top: 35px
+    display: flex
+    &--hidden
+      display: none
+  &-button
+    margin-right: 25px
+    padding: 15px 48px 18px
+    width: 265px
+    display: inline-block
+    text-align: center
+    font-size: 15px
+    line-height: 26px
+    &:last-child
+      margin-right: 0
+  &-links
+    margin-top: 60px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &-link
+    margin-right: 22px
+    &--hidden
+      display: none
+    &--green
+      @extend %title-font
+      position: relative
+      font-size: 20px
+      line-height: 28px
+      color: #29BC26
+      transition: all 0.3s
+      &::after
+        position: absolute
+        content: ''
+        height: 2px
+        background-color: #29BC26
+        left: 0
+        right: 0
+        bottom: 0
+  &-info
+    margin-top: 60px
+    color: #898989
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+    &--hidden
+      display: none
+
+@media (max-width: 1400px)
+  .status
+    &-link
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+
+@media (max-width: 1200px)
+  .status
+    &-entry
+      &__form
+        flex-wrap: wrap
+        max-width: 500px
+      &__button
+        width: 100%
+    &-links
+      margin-top: 30px
+      flex-direction: column
+      align-items: flex-start
+    &-info
+      margin-top: 50px
+
+@media (max-width: 992px)
+  .status
+    &-entry
+      align-items: center
+
+@media (max-width: 767px)
+  .status
+    &__title
+      margin-bottom: 30px
+      font-size: 26px
+      line-height: 35px
+    &__text
+      font-size: 13px
+      line-height: 24px
+    &-main
+      margin-bottom: 50px
+      font-size: 16px
+      line-height: 20px
+      &__item
+        align-items: center
+      &__state
+        padding: 3px 20px
+        font-size: 13px
+        line-height: 22px
+    &-list
+      &__title
+        margin-bottom: 5px
+        font-size: 16px
+        line-height: 20px
+      &__item
+        padding-bottom: 20px
+        flex-direction: column
+        &:first-child
+          padding-top: 0
+    &-price
+      margin-top: 50px
+      font-size: 16px
+      line-height: 20px
+    &-buttons
+      margin-top: 30px
+      flex-wrap: wrap
+    &-button
+      margin-bottom: 15px
+    &-link
+      font-size: 16px
+      line-height: 28px
+    &-info
+      &__text
+        margin-bottom: 16px
+        font-size: 10px
+        line-height: 16px
+
+@media (max-width: 576px)
+  .status
+    &-entry
+      align-items: flex-start
+      &__title
+        font-size: 16px
+        line-height: 20px
+    &-button
+      width: 100%
+      margin-right: 0

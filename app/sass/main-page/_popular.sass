@@ -1,0 +1,105 @@
+//Стилизация секции popular
+.popular
+  margin-bottom: 93px
+  &__title
+    margin-bottom: 60px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &-cards
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &-card
+    margin-bottom: 30px
+    position: relative
+    width: 400px
+    height: 224px
+    border-radius: 20px
+    overflow: hidden
+    box-shadow: 0px 8px 21px -1px rgba(34, 60, 80, 0.4)
+    &::after
+      content: ''
+      position: absolute
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.66) 100%)
+      border-radius: 0px 0px 20px 20px
+      height: 142px
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+    &__text
+      position: absolute
+      font-size: 15px
+      line-height: 22px
+      font-weight: 700
+      color: #fff
+      bottom: 42px
+      left: 43px
+      z-index: 4
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+@media (max-width: 1400px)
+  .popular
+    &-card
+      width: 350px
+
+@media (max-width: 1200px)
+  .popular
+    margin-bottom: 90px
+    &__title
+      font-size: 36px
+      line-height: 45px
+    &-card
+      width: 295px
+
+@media (max-width: 992px)
+  .popular
+    &-card
+      max-width: 320px
+      width: 100%
+      &__img
+        object-fit: cover
+        width: 100%
+        height: 100%
+
+@media (max-width: 767px)
+  .popular
+    &__title
+      margin-bottom: 40px
+      font-size: 26px
+      line-height: 35px
+      text-align: center
+    &-card
+      max-width: 100%
+      box-shadow: none
+      margin-bottom: 0
+    & .slider
+      &__arrow
+        &--left
+          bottom: 61%
+@media (max-width: 430px)
+  .popular
+    &-card
+      height: 160px
+    & .slider
+      &__arrow
+        &--left
+          bottom: 0
+        &--right
+          top: 124%
+    & .slick
+      &-dots
+        left: 20%
+        bottom: -42px
+        button
+          margin-right: 7px
+
+@media (max-width: 360px)
+  .popular
+    & .slick
+      &-dots
+        left: 16%

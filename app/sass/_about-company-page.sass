@@ -1,0 +1,272 @@
+.company
+  &-gallery
+    padding: 120px 0 60px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(5, 100px)
+    grid-gap: 38px 30px
+    &__img
+      width: 100%
+      height: 100%
+      object-fit: cover
+    &__item
+      position: relative
+      grid-row: span 3
+      &:nth-child(even)
+        grid-row: span 2
+      &:nth-child(4)
+        grid-row: 4/6
+  &-item
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 61px 0
+    &::after
+      position: absolute
+      content: ''
+      height: 1px
+      background-color: #E4E4E4
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+    &:last-child
+      padding-bottom: 40px
+      margin-bottom: 120px
+
+    &__box
+      max-width: 760px
+    &__title
+      max-width: 400px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+  &-reasons
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    &__item
+      margin-bottom: 36px
+      max-width: 226px
+      &:nth-last-child(-n+3)
+        margin-bottom: 22px
+    &__num
+      display: block
+      margin-bottom: 12px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $red
+  &-insurance
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &::before
+        position: absolute
+        content: ''
+        background-color: $red
+        height: 2px
+        width: 20px
+        left: 0
+        bottom: 12px
+    &__text
+      margin-bottom: 5px
+      margin-top: 34px
+  &-requisites
+    &__bottom
+      display: flex
+      justify-content: space-between
+    &__text
+      margin-bottom: 30px
+    &__title
+      margin-bottom: 39px
+      font-weight: 600
+      font-size: 15px
+      line-height: 26px
+    &__img
+      width: 137px
+      height: 197px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &::before
+        position: absolute
+        content: ''
+        background-color: $red
+        height: 2px
+        width: 20px
+        left: 0
+        bottom: 12px
+      &:last-child
+        margin-bottom: 0
+  &-certificates
+    max-width: 760px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+      width: 175px
+      height: 238px
+      margin-bottom: 20px
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+
+@media (max-width: 1400px)
+  .company
+    &-gallery
+      padding: 70px 0 60px
+      grid-gap: 30px
+    &-item
+      &:last-child
+        margin-bottom: 70px
+
+@media (max-width: 1200px)
+  .company
+    &-item
+      &__box
+        max-width: 700px
+      &__title
+        margin-bottom: 15px
+
+@media (max-width: 992px)
+  .company
+    &-gallery
+      padding-bottom: 0
+      grid-template-columns: repeat(2, 1fr)
+      grid-template-rows: repeat(6, 120px)
+      grid-gap: 20px
+      &__item
+        grid-row: span 1
+        &:first-child
+          grid-row: span 2
+          grid-column: span 2
+        &:nth-child(2)
+          grid-column: 1/2
+          grid-row: 3/4
+        &:nth-child(4)
+          grid-row: span 2
+          grid-column: span 2
+        &:nth-child(6)
+          grid-row: span 1
+    &-item
+      flex-direction: column
+      &:last-child
+        margin-bottom: 70px
+    &-certificates
+      &__item
+        width: 150px !important
+        height: 203px
+@media (max-width: 767px)
+  .company
+    &-requisites
+      &__bottom
+        flex-direction: column
+      &__list
+        margin-bottom: 20px
+    &-item
+      padding: 40px 0
+      & .slider
+        &__arrow
+          &--left
+            bottom: 62%
+            left: -48px
+      & .slick
+        overflow: hidden
+        &-slide
+          margin: 0 10px
+        &-list
+          margin-left: -5px
+          margin-right: -10px
+
+@media (max-width: 576px)
+  .company
+    &-gallery
+      grid-template-rows: repeat(6, 85px)
+    &-certificates
+      &__item
+        width: 215px !important
+        height: 300px
+      & .slider
+        &__arrow
+          &--right
+            top: 51%
+    &-item
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__text
+        font-size: 13px
+        line-height: 24px
+    &-reasons
+      &__item
+        max-width: 150px
+      &__num
+        font-size: 16px
+        line-height: 20px
+      &__text
+        font-size: 13px
+        line-height: 24px
+    &-insurance
+      &__item,
+      &__text
+        font-size: 13px
+        line-height: 24px
+    &-requisites
+      &__title,
+      &__item,
+      &__text
+        font-size: 13px
+        line-height: 24px
+
+@media (max-width: 520px)
+  .company
+    &-certificates
+      &__item
+        width: 180px !important
+        height: 260px
+
+@media (max-width: 450px)
+  .company
+    &-certificates
+      & .slider
+        &__arrow
+          &--right
+            top: 112%
+            right: 16px
+          &--left
+            bottom: 6%
+            left: 11px
+      &__item
+        width: 150px !important
+        height: 203px
+
+@media (max-width: 360px)
+  .company
+    &-gallery
+      margin-top: 0
+      padding-bottom: 30px
+    &-item
+      &__title
+        margin-bottom: 30px
+
+@media (max-width: 340px)
+  .company
+    &-certificates
+      &__item
+        width: 125px !important
+        height: 185px
+    &-reasons
+      &__item
+        max-width: 130px

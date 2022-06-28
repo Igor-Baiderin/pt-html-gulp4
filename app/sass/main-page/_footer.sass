@@ -1,0 +1,271 @@
+//Стилизация footer
+.footer
+  padding-top: 95px
+  padding-bottom: 55px
+  background-color: $grey
+  &__top
+    display: flex
+    justify-content: space-between
+    margin-bottom: 56px
+  & .entry
+    background-color: #fff
+    margin-right: 30px
+  &-contacts
+    display: flex
+    flex-direction: column
+    &__wrapper
+      display: flex
+      flex-direction: column
+    &__title
+      margin-bottom: 30px
+    &__phone
+      margin-bottom: 25px
+    &__text
+      position: relative
+      margin-bottom: 5px
+      padding-left: 23px
+      @extend %title-font
+      color: #898989
+      font-size: 16px
+      line-height: 22px
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/phone.svg')
+        width: 11px
+        height: 12px
+        left: 0
+        top: 5px
+    &__phone
+      @extend %title-font
+      color: $black
+      font-size: 16px
+      line-height: 22px
+  &-info
+    margin-right: 110px
+    &__text
+      margin-top: 46px
+      margin-bottom: 46px
+      max-width: 232px
+      line-height: 22px
+      color: #898989
+  &-menu
+    margin-top: 5px
+    &__title
+      margin-bottom: 32px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__nav
+      margin-bottom: 30px
+    &__list
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    &__item
+      margin-bottom: 8px
+    &__link
+      color: inherit
+    &__nav
+      display: flex
+  &-contacts
+    margin-top: 5px
+    &__title
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+  &-social
+    margin-top: 50px
+    width: 226px
+    display: flex
+    justify-content: space-between
+    &__img
+      width: 16px
+      height: 16px
+    &__link
+      display: inline-block
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 34px
+      height: 34px
+      border-radius: 50%
+      transition: all 0.3s
+      &--red
+        background-color: #FF5252
+      &--blue
+        background-color: #2787F5
+      &--green
+        background-color: #00E676
+      &--lightblue
+        background-color: #25A2E0
+      &--purple
+        background-color: #5C45B3
+  &__bottom
+    position: relative
+    padding-top: 52px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    color: #898989
+    &::before
+      content: ''
+      position: absolute
+      background-color: #e4e4e4
+      height: 1px
+      width: 100%
+      top: 0
+      right: 0
+      left: 0
+  &__copyright
+    margin-right: 135px
+  &__confidential
+    color: inherit
+  &-register
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 12px 22px
+    background-color: #fff
+    border-radius: 10px
+    &__img
+      margin-right: 20px
+    &__text
+      margin-bottom: 6px
+      font-size: 12px
+      line-height: 15px
+      color: #898989
+    &__number
+      font-family: 'Open Sans', sans-serif
+      font-weight: 700
+      font-size: 15px
+      line-height: 18px
+.scrollup
+  width: 40px
+  height: 40px
+  opacity: 0.3
+  position: fixed
+  bottom: 50px
+  right: 100px
+  display: none
+  text-indent: -9999px
+  z-index: 8
+  background: url(../images/icon_top.png) no-repeat
+
+@media (max-width: 1400px)
+  .footer
+    &__copyright
+      margin-right: 0
+
+@media (max-width: 1200px)
+  .footer
+    &-social
+      width: 200px
+    &-info
+      margin-right: 20px
+      &__text
+        margin-bottom: 40px
+    &__bottom
+      font-size: 13px
+      line-height: 24px
+    &-menu
+      &__nav
+        margin-bottom: 33px
+    &-register
+      width: 240px
+
+@media (max-width: 992px)
+  .footer
+    &__top
+      flex-wrap: wrap
+      margin-bottom: 40px
+    &-info
+      margin-right: 0
+    &-menu
+      &__nav
+        margin-bottom: 33px
+      &__list
+        margin-right: 20px
+      &__item
+        font-size: 14px
+    & .entry
+      margin-right: 15px
+      &:last-child
+        margin-right: 0
+    &-contacts
+      width: 100%
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+      &__wrapper
+        margin-top: 20px
+      &__title
+        display: none
+    &-social
+      margin-top: 0
+    &__bottom
+      padding-top: 27px
+      flex-direction: column
+      align-items: start
+    &__payment
+      margin-top: 30px
+  .scrollup
+    right: 5%
+    bottom: 75px
+@media (max-width: 767px)
+  .footer
+    padding-top: 70px
+    &__top
+      align-items: center
+    & .logo__img
+      margin-bottom: 15px
+    & .entry
+      margin-right: 0
+      &-wrapper
+        flex-direction: column
+      &-client
+        margin-bottom: 15px
+    &-menu
+      display: none
+    &-info
+      &__text
+        display: none
+    &-contacts
+      flex-wrap: wrap
+    &-social
+      width: 240px
+@media (max-width: 576px)
+  .footer
+    &__top
+      flex-direction: column
+    &-info
+      margin-bottom: 15px
+      display: flex
+      flex-direction: column
+      align-items: center
+    & .entry
+      font-size: 16px
+      line-height: 22px
+      width: 312px
+      text-align: center
+    &-contacts
+      flex-direction: column
+      &__wrapper
+        margin-top: 30px
+      &__title
+        display: block
+        margin-top: 40px
+        margin-bottom: 0
+    &-social
+      margin-top: 25px
+    &__bottom
+      align-items: center
+    &-register
+      width: 100%
+
+@media (max-width: 360px)
+  .footer
+    &-wrapper
+      width: 100%
+    & .entry
+      width: 100%

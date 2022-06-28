@@ -1,0 +1,40 @@
+.clients-check
+  &__title
+    margin-bottom: 60px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &__form
+    display: flex
+    &--hidden
+      display: none
+  &__input
+    margin-right: 20px
+    border: 2px solid #E4E4E4
+    border-radius: 10px
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-left: 20px
+    width: 100%
+  &__button
+    padding: 14px
+    width: 300px
+.clients
+  &-disabled
+    margin-top: 35px
+    &--hidden
+      display: none
+
+@media (max-width: 576px)
+  .clients-check
+    &__title
+      margin-bottom: 30px
+      font-size: 26px
+      line-height: 35px
+    &__form
+      flex-wrap: wrap
+    &__input
+      margin-bottom: 15px
+      margin-right: 0
+    &__button
+      width: 100%

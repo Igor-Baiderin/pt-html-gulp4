@@ -1,0 +1,153 @@
+//Стилизация секции best
+.best
+  margin-bottom: 120px
+  &__title
+    margin-bottom: 65px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &__link
+    &--mobile
+      display: none
+  &-cards
+    margin-bottom: 22px
+    display: flex
+    justify-content: space-between
+  &-card
+    max-width: 400px
+    filter: drop-shadow(0px 15px 15px rgba(0, 0, 0, 0.06))
+    background-color: #fff
+    border-radius: 20px
+    overflow: hidden
+    &__img
+      position: relative
+      display: block
+      height: 225px
+      overflow: hidden
+      border-radius: 20px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__content
+      padding: 28px 45px 45px
+    &__title
+      margin-top: 15px
+      margin-bottom: 30px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__discount
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $red
+    &__text
+      margin-top: 30px
+      margin-bottom: 30px
+      max-height: 52px
+      overflow: auto
+    &__price
+      @extend %title-font
+      margin-bottom: 29px
+      display: block
+      font-size: 20px
+      line-height: 28px
+    &__link
+      padding: 15px 42px 18px
+      display: block
+      width: 170px
+      font-size: 16px
+      line-height: 22px
+  & .slick
+    overflow: hidden
+    &-track
+      width: auto
+      height: 720px
+    &-slide
+      margin: 0 15px
+    &-list
+      margin-left: -15px
+      margin-right: -15px
+  & .slider
+    &__arrow
+      &--left
+        bottom: 49%
+
+@media (max-width: 1200px)
+  .best
+    margin-bottom: 90px
+    &__title
+      font-size: 36px
+      line-height: 45px
+    &-card
+      filter: drop-shadow(0px 10px 10px rgba(0,0,0,0.06))
+      &__text
+        max-height: 78px
+
+@media (max-width: 992px)
+  .best
+    &__title
+      font-size: 36px
+      line-height: 44px
+
+@media (max-width: 767px)
+  .best
+    margin-bottom: 100px
+    &__title
+      font-size: 26px
+      line-height: 35px
+      text-align: center
+    &-card
+      display: block !important
+      margin-left: auto
+      margin-right: auto
+
+@media (max-width: 576px)
+  .best
+    &__link
+      margin-left: 60px
+      &--desktop
+        display: none
+      &--mobile
+        display: inline
+    &-card
+      &__content
+        padding: 28px 25px 45px
+      &__img
+        height: 166px
+      &__title
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 20px
+      &__discount
+        font-size: 16px
+        line-height: 20px
+      &__text
+        margin-top: 15px
+        margin-bottom: 20px
+        font-size: 13px
+        line-height: 24px
+      &__link
+        width: 100%
+        padding: 15px 110px
+    & .slick
+      &-track
+        height: 600px
+
+@media (max-width: 430px)
+  .best
+    & .slider
+      &__arrow
+        &--left
+          bottom: 7%
+        &--right
+          top: 100%
+
+@media (max-width: 360px)
+  .best
+    &__link
+      margin-left: 45px
+    &-card
+      &__link
+        padding: 15px 70px

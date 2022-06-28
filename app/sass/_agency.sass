@@ -1,0 +1,266 @@
+.cooperation
+  margin: 120px auto
+  &__title
+    margin-bottom: 35px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &__text
+    color: #898989
+  &-step
+    padding: 60px 0 60px
+    display: flex
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      background-color: $grey
+      height: 1px
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+    &__wrapper
+      margin-right: 135px
+      width: 365px
+      min-width: 365px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__num
+      color: $red
+    &__text
+      margin-bottom: 36px
+      &--mb
+        margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+    &__link
+      &--mb
+        margin-bottom: 35px
+        display: inline-block
+    &__mail
+      color: $red
+  &__button
+    display: inline-block
+    margin-top: 60px
+    padding: 15px 40px 18px
+    width: 400px
+    text-align: center
+.agency
+  margin: 120px auto
+  &__title
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &-item
+    display: flex
+    padding: 60px 0
+    position: relative
+    &::after
+      position: absolute
+      content: ''
+      background-color: $grey
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+      height: 1px
+    &__boxes
+      display: flex
+      flex-wrap: wrap
+      gap: 30px
+    &__box
+      padding: 27px 30px 25px
+      width: 233px
+      background-color: $grey
+    &__title
+      margin-right: 180px
+      width: 320px
+      min-width: 320px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__text
+      color: $black
+      &--mt
+        margin-top: 5px
+    &__img
+      margin-bottom: 16px
+  &-info
+    &__link
+      color: $red
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        content: ''
+        background-color: $red
+        width: 20px
+        height: 2px
+        left: 0
+        top: 13px
+.application
+  margin: 120px auto
+  &-form
+    &__wrapper
+      margin-bottom: 60px
+      &:last-child
+        margin-bottom: 0
+    &__title
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__inputs
+      display: flex
+      flex-wrap: wrap
+      gap: 20px
+    &__input
+      width: 406px
+      padding-left: 23px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-bottom: 12px
+    &__area
+      width: 833px
+      height: 225px
+      padding-left: 23px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-bottom: 12px
+      textarea
+        overflow: hidden
+        resize: none
+        width: 100%
+        height: 100%
+        border: none
+    &__button
+      margin-top: 30px
+      padding: 15px 92px 18px
+      width: 400px
+  & .main-form__label
+    margin-top: 30px
+.select
+  &-country
+    width: 406px
+
+@media (max-width: 1400px)
+  .agency
+    &-item
+      &__title
+        margin-right: 50px
+      &__boxes
+        gap: 20px
+  .cooperation
+    &-step
+      &__wrapper
+        margin-right: 50px
+  .application
+    margin: 70px auto
+    &-form
+      &__input
+        width: 360px
+      &__area
+        width: 740px
+  .select
+    &-country
+      width: 360px
+@media (max-width: 1200px)
+  .cooperation
+    margin: 70px auto
+  .agency
+    margin: 70px auto
+
+@media (max-width: 992px)
+  .cooperation
+    &-step
+      flex-direction: column
+      &__wrapper
+        margin-bottom: 30px
+  .agency
+    &-item
+      flex-direction: column
+      &__title
+        margin-bottom: 30px
+  .application
+    &-form
+      &__input
+        width: 100%
+      &__area
+        width: 100%
+  .select
+    &-country
+      width: 100%
+@media (max-width: 767px)
+  .cooperation
+    margin: 50px auto
+    &-step
+      padding: 50px 0
+  .agency
+    margin: 50px auto
+    &-item
+      padding: 50px 0
+
+@media (max-width: 576px)
+  .cooperation
+    &__title
+      margin-bottom: 30px
+      font-size: 26px
+      line-height: 35px
+    &__text
+      font-size: 13px
+      line-height: 24px
+    &__button
+      margin-top: 50px
+      width: 100%
+      padding: 15px 19px 18px
+    &-step
+      &__wrapper
+        margin-right: 0
+        font-size: 16px
+        line-height: 20px
+      &__text
+        margin-bottom: 30px
+        font-size: 13px
+        line-height: 24px
+      &__link
+        font-size: 16px
+        line-height: 20px
+  .agency
+    &__title
+      margin-bottom: 0
+      font-size: 26px
+      line-height: 35px
+    &-item
+      &__title
+        margin-right: 0
+        font-size: 16px
+        line-height: 20px
+      &__box
+        width: 100%
+      &__text
+        font-size: 13px
+        line-height: 24px
+    &-info
+      &__item
+        font-size: 13px
+        line-height: 24px
+  .application
+    margin: 50px auto 70px
+    &-form
+      &__title
+        margin-bottom: 30px
+        font-size: 16px
+        line-height: 20px
+      &__wrapper
+        margin-bottom: 50px
+      &__button
+        width: 100%
+        padding: 15px 30px 18px

@@ -1,0 +1,186 @@
+.catalog
+  &__inner
+    &--hidden
+      display: none
+  &-map
+    &--hidden
+      display: none
+    &__bottom
+      margin: 70px auto
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+  &-list
+    &--hidden
+      display: none
+  &__link
+    background-color: transparent
+    border: none
+    &--hidden
+      display: none
+  &-item
+    &__buttons
+      display: flex
+      justify-content: space-between
+      margin-top: 30px
+    &__button
+      &--booking,
+      &--payment
+        padding: 16px 25px
+        font-size: 16px
+        line-height: 22px
+      &--booking
+        border: none
+  &-search
+    margin-bottom: 60px
+    &--mobile
+      display: none
+    &__form
+      display: flex
+      justify-content: space-between
+    &__title
+      margin-bottom: 15px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__button
+      padding: 16px 56px
+    &__input
+      position: relative
+      border: 2px solid #E4E4E4
+      width: 515px
+      border-radius: 10px
+      & input
+        padding-top: 12px
+        padding-bottom: 12px
+        padding-left: 55px
+        width: 100%
+        &::placeholder
+          color: #898989
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/marker.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 11px
+        height: 15px
+        left: 25px
+        top: 19px
+        z-index: 3
+  &-more
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 16px 16px 17px
+    margin: 80px auto 40px
+    width: 100%
+    border: none
+    cursor: pointer
+    &:before
+      display: inline-block
+      content: ''
+      background-image: url('../images/icons/plus-small.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      margin-right: 15px
+      height: 15px
+      width: 15px
+      transition: all, 0.3s
+
+.catalog-objects
+  & .catalog
+    &-item
+      &__img
+        height: 319px
+  & .pagination
+    margin-top: 0
+
+.catalog-sanatorium
+  & .pagination
+    margin-top: 0
+
+.modal
+  &-booking
+    &__dialog
+      &--visible
+        visibility: visible
+        opacity: 1
+
+@media (max-width: 1400px)
+  .catalog
+    &-item
+      &__button
+        &--booking,
+        &--payment
+          padding: 16px 16px
+    &-search
+      &__form
+        flex-direction: column
+      &__input
+        margin-bottom: 15px
+      &__button
+        width: 300px
+
+@media (max-width: 1200px)
+  .catalog
+    &-item
+      &__buttons
+        flex-direction: column
+      &__button
+        &--booking
+          margin-bottom: 15px
+
+@media (max-width: 992px)
+  .catalog
+    &-search
+      display: none
+      &__form
+        align-items: center
+      &__button
+        width: 400px
+      &__input
+        width: 400px
+      &__title
+        text-align: center
+
+      &--mobile
+        display: block
+        margin-bottom: 50px
+@media (max-width: 767px)
+  .catalog-objects
+    & .catalog
+      &-item
+        &__img
+          height: 250px
+      &-more
+        margin: 50px auto 40px
+  .pagination
+    margin: 70px auto
+
+@media (max-width: 576px)
+  .catalog-objects
+    & .catalog
+      &-item
+        &__img
+          height: 210px
+        &__wrapper
+          margin-bottom: 0
+  .catalog
+    &__inner
+      margin-top: 50px
+    &-search
+      &__title
+        text-align: left
+        font-size: 16px
+        line-height: 20px
+      &__input,
+      &__button
+        width: 100%
+    &-map
+      &__text
+        font-size: 13px
+        line-height: 24px
+  .pagination
+    margin: 70px auto

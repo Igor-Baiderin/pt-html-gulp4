@@ -1,0 +1,139 @@
+.contacts-map
+  width: 100%
+  height: 700px
+  position: relative
+
+.sanatoriums-map
+  width: 100%
+  padding-top: 75%
+  position: relative
+
+#map
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 0
+
+.sanatoriums-map
+  & .map-placemark
+    width: 46px
+    height: 46px
+    transform: translate(-50%, -50%)
+  & .map-modal-body
+    min-height: max-content
+    height: 100%
+    box-shadow: 0 0 20px rgba(0,0,0,.1)
+    border-radius: 20px
+  & .map-modal
+    width: 45%
+    height: 100%
+    top: 0
+    background: #fff
+    position: absolute
+    z-index: 1
+    right: -100%
+    visibility: hidden
+    opacity: 0
+    transition: all .3s ease
+    display: flex
+    flex-direction: column
+    &.active
+      right: 0
+      opacity: 1
+      visibility: visible
+    &-close
+      position: absolute
+      top: 10px
+      right: 10px
+      width: 40px
+      height: 40px
+      border-radius: 50%
+      background: #fff
+      cursor: pointer
+      display: flex
+      justify-content: center
+      align-items: center
+      z-index: 1
+    &-img
+      width: 100%
+      padding-top: 47%
+      position: relative
+      border-radius: 20px
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 100%
+        height: 100%
+        transform: translate(-50%, -50%)
+        object-fit: cover
+    &-content
+      padding: 28px 67px
+      background-color: #fff
+      border-radius: 20px
+    &-rating
+      margin-bottom: 24px
+    &-title
+      font-family: 'Gilroy-600'
+      margin-bottom: 11px
+      font-size: 20px
+      max-height: 50px
+      overflow: hidden
+    &-desc
+      font-size: 15px
+      margin-bottom: 15px
+      color: #898989
+      overflow: hidden
+      max-height: 80px
+    &-price
+      font-family: 'Gilroy-600'
+      margin-bottom: 20px
+      font-size: 20px
+    &-btn
+      padding: 15px 42px
+      display: inline-block
+
+@media (max-width: 1400px)
+  .sanatoriums-map .map-modal-content
+    padding: 15px
+  .map-modal-body
+    position: relative
+  .map-modal-btn
+    position: absolute
+    content: ''
+    bottom: 20px
+    width: 90%
+    text-align: center
+
+@media (max-width: 1200px)
+  .map-modal-body
+    background-color: #fff
+    box-shadow: 0 0 20px rgba(0,0,0,0.1)
+    border-radius: 20px
+  .map-modal-btn
+    display: inline-block
+    padding-bottom: 15px
+  .sanatoriums-map
+    & .map-modal-price
+      font-size: 18px
+      margin-bottom: 10px
+    & .map-modal-rating
+      margin-bottom: 10px
+    & .map-modal-desc
+      margin-bottom: 5px
+
+@media (max-width: 576px)
+  .sanatoriums-map
+    & .map-modal
+      width: 100%
+      &-title
+        font-size: 16px
+        line-height: 20px
+      &-body
+        height: max-content
+  .map-modal-btn
+    position: static
+    width: 100%

@@ -1,0 +1,241 @@
+.modal
+  &-cancellation__dialog
+    width: 400px
+    & .modal-form__button
+      margin-bottom: 0
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+  &-contract__dialog
+    width: 885px
+    max-width: 885px
+    text-align: left
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+    & .modal-dialog__title
+      margin-bottom: 35px
+    & .jq-checkbox
+      margin-right: 17px
+      width: 14px
+      height: 14px
+      background-color: #e4e4e4
+      border-radius: 4px
+      left: 0
+      &.checked
+        &::after
+          background-image: url('../images/icons/checked-black.svg')
+          width: 10px
+          height: 10px
+          left: 2px
+  &-changing__dialog
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+    & .modal-form__button
+      margin-bottom: 0
+    & .modal-dialog__title
+      margin-bottom: 35px
+    & .modal-form__textarea
+      margin-top: 10px
+  &-list__dialog
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+  &-corporate__dialog
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+      & .modal-form__textarea
+        margin-top: 0
+        height: 126px
+  &-search__dialog
+    width: 576px
+    max-width: 576px
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+    & .modal-dialog__title
+      text-align: left
+      margin-bottom: 30px
+  &-description__dialog
+    &--visible
+      visibility: visible
+      opacity: 1
+      z-index: 60
+  &-dialog
+    &__title
+      &-order
+        color: $red
+  &-form
+    &__textarea
+      margin-top: 35px
+      margin-bottom: 15px
+      width: 100%
+      height: 195px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+    textarea
+      width: 100%
+      height: 100%
+      border: none
+      resize: none
+      &::placeholder
+        color: #898989
+  &-contract
+    &__box
+      margin-bottom: 20px
+      display: flex
+      justify-content: space-between
+    &__text
+      margin-bottom: 10px
+      font-size: 12px
+      line-height: 22px
+      color: #898989
+    &__textarea
+      margin-bottom: 15px
+      width: 100%
+      height: 125px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      resize: none
+      &::placeholder
+        color: #898989
+    &__label
+      margin-bottom: 20px
+      display: block
+    &__button
+      width: 387px
+      padding: 15px 15px 18px
+    input
+      width: 386px
+    &__wrapper
+      width: calc(50% - 10px)
+    &-input
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      width: 100%
+  &-list
+    &__wrapper
+      margin-top: 35px
+      text-align: left
+    &__text
+      margin-bottom: 10px
+      font-size: 12px
+      line-height: 22px
+      color: #898989
+    &__textarea
+      margin-bottom: 15px
+      width: 100%
+      height: 195px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      textarea
+        width: 100%
+        height: 100%
+        border: none
+        resize: none
+        &::placeholder
+          color: #898989
+    &__button
+      width: 100%
+      padding: 15px 15px 18px
+    &__input
+      border: 2px solid #E4E4E4
+      margin-bottom: 10px
+      padding-left: 25px
+      padding-right: 45px
+      border-radius: 10px
+      padding-top: 12px
+      padding-bottom: 12px
+    input
+      width: 100%
+      height: 100%
+  &-search
+    &__input
+      position: relative
+      padding-right: 45px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-bottom: 12px
+    &__button
+      position: absolute
+      background-color: transparent
+      border: none
+      top: 10px
+      right: 20px
+    input
+      border: none
+      padding: 0
+      width: 100%
+      margin-bottom: 0
+      padding-left: 25px
+  &-transfer
+    & .modal-dialog__title
+      margin-bottom: 20px
+    & .modal-form__button
+      margin-bottom: 0
+      margin-top: 0
+
+.select-theme
+  width: 100%
+
+@media (max-width: 992px)
+  .modal
+    &-search
+      &__dialog
+        max-width: 70%
+        width: 100%
+    &-cancellation
+      &__dialog
+        width: 90%
+    &-contract
+      &__dialog
+        width: 100%
+        max-width: 90%
+      input
+        width: 50%
+      &__box
+        flex-direction: column
+        gap: 15px
+      &__wrapper
+        width: 100%
+
+@media (max-width: 576px)
+  .modal
+    &-search
+      &__dialog
+        max-width: 90%
+    &-corporate
+      &__dialog
+        width: 100%
+        max-width: 80%
+        &--visible
+          & .modal-form
+            input
+              width: 100%
+          & .modal-form-input
+            width: 100%
+          & .main-form__label
+            margin-top: 0
+          & .modal-dialog__text
+            margin-bottom: 15px

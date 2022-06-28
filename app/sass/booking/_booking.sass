@@ -1,0 +1,334 @@
+.booking
+  padding: 100px 0 120px
+  position: relative
+  &::before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 493px
+    background-color: $grey
+    top: 0
+    left: 0
+    right: 0
+    z-index: -1
+  &__title
+    margin-bottom: 60px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &-container
+    padding: 60px 45px 0
+    background-color: #fff
+  &-wrapper
+    display: flex
+    margin-bottom: 60px
+  &__img
+    margin-right: 98px
+    width: 332px
+    height: 225px
+    object-fit: cover
+    border-radius: 20px
+    cursor: pointer
+  &-info
+    max-width: 355px
+    margin-right: 77px
+    &__title
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__name
+      margin-bottom: 10px
+    &__room
+      margin-bottom: 10px
+      font-family: 'Open Sans', sans-serif
+      font-weight: 700
+    &__text
+      margin-bottom: 10px
+    &__price
+      color: #898989
+      span
+        padding-left: 5px
+        font-family: 'Gilroy-700'
+        font-weight: 700
+        font-size: 20px
+        line-height: 28px
+        color: #29BC26
+  &-conditions
+    &__title
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        content: ''
+        width: 20px
+        height: 2px
+        background-color: $red
+        left: 0
+        top: 13px
+  &-steps
+    display: flex
+    align-items: center
+  &-step
+    padding-right: 75px
+    position: relative
+    display: flex
+    align-items: center
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: #E4E4E4
+    &::after
+      position: absolute
+      content: ''
+      width: 35px
+      height: 1px
+      background-color: #e4e4e4
+      right: 20px
+      top: 50%
+      transform: translate(0,50%)
+    &:last-child
+      &::after
+        display: none
+    &__num
+      margin-right: 20px
+    &--active
+      & .booking-step__num
+        margin-right: 30px
+        color: #fff
+        background-color: $red
+        padding: 23px 27px
+        border-radius: 50%
+      & .booking-step__title
+        color: $black
+  &-information
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &__title
+      margin-top: 60px
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+  &-form
+    width: 785px
+    min-width: 785px
+    &__inputs
+      display: flex
+      flex-wrap: wrap
+      gap: 20px
+    &__input
+      width: 100%
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding: 12px 20px
+      &::placeholder
+        color: #898989
+      &-text
+        margin-top: 10px
+        font-size: 12px
+        line-height: 16px
+        color: #898989
+      &-wrapper
+        width: 382px
+    &__adding.active
+      display: block
+    &__adding
+      display: none
+      position: relative
+      margin-top: 30px
+      padding: 16px 25px 17px 56px
+      width: 100%
+      text-align: left
+      @extend %title-font
+      font-size: 16px
+      line-height: 22px
+      border-radius: 10px
+      border: none
+      background-color: $grey
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/plus-quest.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 16px
+        height: 16px
+        left: 25px
+        top: 20px
+    &__textarea
+      margin-bottom: 25px
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      margin-top: 60px
+      textarea
+        width: 100%
+        height: 100px
+        resize: none
+        border: none
+        &::placeholder
+          color: #898989
+    &__button
+      margin-top: 35px
+      width: 370px
+      padding: 15px 15px 18px
+  &-warning
+    position: relative
+    padding: 62px 30px 30px
+    width: 308px
+    border-radius: 10px
+    background-color: #FFF5F5
+    &::before
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/question-quest.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      left: 30px
+      top: 30px
+      width: 22px
+      height: 22px
+    &--mobile
+      display: none
+
+@media (max-width: 1400px)
+  .booking
+    &__img
+      margin-right: 50px
+    &-form
+      margin-right: 25px
+      width: 740px
+      min-width: 740px
+      &__input
+        &-wrapper
+          width: 360px
+
+@media (max-width: 1200px)
+  .booking
+    &-form
+      width: 610px
+      min-width: 610px
+      &__input
+        &-wrapper
+          width: 295px
+    &-info
+      margin-right: 10px
+    &__img
+      margin-right: 35px
+      width: 270px
+
+@media (max-width: 992px)
+  .booking
+    padding: 100px 0 70px
+    &::before
+      height: 400px
+    &-warning
+      display: none
+      &--mobile
+        display: block
+        width: 100%
+    &__title
+      margin-top: 50px
+    &-wrapper
+      flex-wrap: wrap
+    &__img
+      width: 100%
+      margin-right: 0
+      margin-bottom: 30px
+    &-steps
+      margin-bottom: 30px
+    &-step
+      &__title
+        display: none
+        font-size: 16px
+        line-height: 20px
+      &--active
+        & .booking-step__title
+          display: block
+        & .booking-step__num
+          padding: 10px 12px
+          margin-right: 25px
+      &__num
+        font-size: 16px
+        line-height: 20px
+    &-info
+      margin-bottom: 30px
+    &-information
+      margin-top: 30px
+    &-form
+      width: 100%
+      min-width: 100%
+      & .main-form__label
+        margin-top: 10px
+      &__adding
+        margin-bottom: 50px
+      &__input
+        &-wrapper
+          width: 100%
+
+@media (max-width: 576px)
+  .booking
+    &-container
+      padding: 0
+      background-color: transparent
+    &__title
+      margin-bottom: 50px
+      font-size: 26px
+      line-height: 35px
+    &__img
+      height: 200px
+    &-info
+      margin-right: 0
+      font-size: 13px
+      line-height: 24px
+      &__title
+        margin-bottom: 15px
+        font-size: 16px
+        line-height: 20px
+      &__price
+        span
+          font-size: 16px
+          line-height: 20px
+    &-conditions
+      &__title
+        margin-bottom: 15px
+        font-size: 16px
+        line-height: 20px
+      &__item
+        font-size: 13px
+        line-height: 24px
+    &-wrapper
+      margin-bottom: 50px
+    &-step
+      padding-right: 60px
+      &::after
+        width: 20px
+    &-information
+      &__title
+        margin-top: 30px
+        font-size: 16px
+        line-height: 20px
+    &-form
+      margin-right: 0
+      &__inputs
+        gap: 15px
+      &__input
+        &-text
+          font-size: 10px
+      &__textarea
+        margin-bottom: 20px
+      &__button
+        margin-top: 30px
+        width: 100%

@@ -1,0 +1,378 @@
+.agency
+  &-form
+    margin: 60px auto
+    padding: 35px 45px
+    border-radius: 20px
+    background-color: $grey
+    &__title
+      margin-bottom: 15px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+      gap: 20px
+    &__input
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-bottom: 12px
+      padding-left: 20px
+      width: 100%
+      &--small
+        width: 200px
+        padding-right: 10px
+      &-wrapper
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/calendar.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 20px
+          height: 20px
+          right: 20px
+          top: 17px
+    &__button
+      width: 25%
+      padding: 15px 15px 18px
+    &__bottom
+      margin-top: 17px
+      display: flex
+      gap: 30px
+    &__label
+      cursor: pointer
+      & .jq-checkbox
+        width: 14px
+        height: 14px
+        border-radius: 4px
+        left: 0px
+        margin-right: 15px
+      & .jq-checkbox.checked::after
+        background-image: url('../images/icons/checked-form.svg')
+        width: 10px
+        height: 10px
+      &--red
+        color: $red
+        & .jq-checkbox
+          background-color: $red
+      &--orange
+        color: #FF6B00
+        & .jq-checkbox
+          background-color: #FF6B00
+      &--green
+        color: #29BC26
+        & .jq-checkbox
+          background-color: #29BC26
+      &--grey
+        color: #898989
+        & .jq-checkbox
+          background-color: #898989
+      &--black
+        & .jq-checkbox
+          background-color: #e4e4e4
+.table
+  margin: 60px auto
+  &-order
+    width: 125px
+    margin-right: 27px
+  &-creation
+    width: 84px
+    margin-right: 27px
+  &-status
+    width: 115px
+    margin-right: 27px
+  &-turist
+    width: 230px
+    margin-right: 27px
+    &__name
+      text-decoration: underline
+    &__date--grey,
+    &__document--grey
+      color: #898989
+  &-object
+    width: 230px
+    margin-right: 10px
+  &-arival
+    width: 84px
+    margin-right: 20px
+  &-price
+    width: 120px
+    margin-right: 13px
+    &__title
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+    &__text
+      margin-bottom: 10px
+      font-weight: 600
+      &--green
+        color: #29BC26
+    &__days
+      margin-top: 17px
+      margin-bottom: 5px
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+      &--hidden
+        display: none
+      &--red
+        color: $red
+    &__expired
+      color: $red
+      font-size: 12px
+      line-height: 16px
+      &--hidden
+        display: none
+  &-paid
+    width: 120px
+    text-align: right
+    &__date
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+    &__dept
+      &--hidden
+        display: none
+    &__text
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+    &__price
+      position: relative
+      font-weight: 600
+      margin-bottom: 10px
+      transition: all 0.3s
+    &__mark
+      display: none
+      position: absolute
+      color: #fff
+      font-size: 10px
+      line-height: 23px
+      transition: all 0.3s
+      text-align: center
+      &--green
+        color: #29BC26
+    &__debt
+      &--hidden
+        display: none
+  &-item
+    position: relative
+    padding: 30px 0 35px
+    &::after
+      position: absolute
+      content: ''
+      background-color: #e4e4e4
+      width: 100%
+      height: 1px
+      bottom: 0
+      left: 0
+      right: 0
+    &__title
+      display: flex
+      padding-top: 0
+      border-bottom: 1px solid #e4e4e4
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__order
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      text-decoration: underline
+      &--green
+        color: #29BC26
+      &--orange
+        color: #FF6B00
+      &--red
+        color: #E0292A
+      &--grey
+        color: #898989
+    &__object
+      color: #898989
+  &-bottom
+    display: flex
+    justify-content: space-between
+    margin-top: 17px
+    &__wrapper
+      &--hidden
+        display: none
+    &__curator
+      color: #898989
+      margin-top: 3px
+      margin-left: 50px
+      &--hidden
+        display: none
+    &__button
+      border: none
+      background-color: transparent
+      position: relative
+      margin-right: 22px
+      padding-left: 26px
+      @extend %title-font
+      font-size: 14px
+      line-height: 22px
+      color: $black
+      &::before
+        position: absolute
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        width: 16px
+        height: 16px
+        left: 0
+        top: 2px
+      &--reduct
+        &::before
+          background-image: url('../images/icons/pen.svg')
+          top: 4px
+      &--list
+        &::before
+          background-image: url('../images/icons/list-order.svg')
+          top: 4px
+      &--transfer
+        &::before
+          background-image: url('../images/icons/transfer.svg')
+          top: 4px
+  &-top
+    display: flex
+  &-info
+    display: flex
+    opacity: 0.8
+    @extend %title-font
+    font-size: 14px
+    line-height: 22px
+    &__item
+      margin-right: 10px
+      &:last-child
+        margin-right: 0
+    &__link
+      display: inline-block
+      text-align: center
+      width: 100px
+      padding: 3px 22px 5px
+      color: #fff
+      border-radius: 7px
+    &__contract
+      background-color: #266BBC
+      border: none
+      &--hidden
+        display: none
+    &__voucher
+      background-color: #26BCB3
+    &__bill
+      background-color: #29BC26
+    &__button
+      background-color: #E0292A
+      border-radius: 7px
+      border: none
+      padding: 3px 14px 5px
+      color: #fff
+
+@media (max-width: 1400px)
+  .table
+    &-price
+      min-width: 110px
+    &-bottom
+      &__button
+        margin-right: 3px
+
+@media (max-width: 1200px)
+  .table
+    &-order
+      min-width: 125px
+      margin-right: 10px
+    &-paid
+      &__price
+        min-width: 85px
+    &-status
+      margin-right: 15px
+    &-bottom
+      &__wrapper
+        max-width: 345px
+    &-info
+      &__link
+        width: 100%
+    &-turist
+      &__date
+        font-size: 13px
+        line-height: 20px
+      &__document
+        font-size: 13px
+        line-height: 20px
+
+@media (max-width: 992px)
+  .agency
+    &-form
+      &__wrapper
+        flex-direction: column
+      &__input
+        width: 100%
+        &--small
+          width: 100%
+      &__button
+        width: 100%
+      &__bottom
+        flex-wrap: wrap
+        gap: 15px
+  .mobile
+    &-overflow
+      width: 1000px
+  .table
+    overflow-x: scroll
+
+@media (max-width: 576px)
+  .table
+    font-size: 11px
+    line-height: 14px
+    &-price
+      min-width: auto
+      width: 110px
+      margin-right: 10px
+    &-object
+      width: 100px
+    &-arival
+      width: 60px
+      margin-right: 10px
+    &-turist
+      width: 120px
+      margin-right: 10px
+    &-status
+      margin-right: 10px
+      width: 80px
+    &-order
+      width: 75px
+      min-width: auto
+    &-creation
+      width: 65px
+      margin-right: 10px
+    &-item
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__order
+        font-size: 12px
+        line-height: 15px
+    &-bottom
+      margin-top: 0
+      justify-content: flex-start
+      &__button
+        font-size: 12px
+        width: 180px
+        text-align: left
+      &__wrapper
+        max-width: 160px
+    &-info
+      max-width: 240px
+      flex-wrap: wrap
+      &__link,
+      &__button
+        padding: 2px 7px
+        font-size: 12px
+  .agency
+    &-form
+      padding: 25px
+      &__bottom
+        font-size: 12px

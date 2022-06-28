@@ -1,0 +1,57 @@
+.about-company
+  margin: 120px auto
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__img
+    margin-right: 100px
+    width: 580px
+    height: 769px
+    object-fit: cover
+  &__box
+    display: flex
+    flex-direction: column
+  &__description
+    margin-bottom: 26px
+    &:first-child
+      margin-top: 5px
+  &__list
+    margin: 40px auto 15px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+  &__item
+    margin-bottom: 35px
+    max-width: 173px
+  &__num
+    display: block
+    margin-bottom: 13px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: $red
+  &__link
+    &::after
+      width: 245px
+
+@media (max-width: 1400px)
+  .about-company
+    &__img
+      margin-right: 80px
+      width: 500px
+      height: auto
+
+@media (max-width: 1200px)
+  .about-company
+    margin: 90px auto
+    &__title
+      font-size: 34px
+      line-height: 42px
+    &__img
+      margin-right: 50px
+      width: 240px
+      height: 100%
+
+@media (max-width: 992px)
+  .about-company
+    display: none

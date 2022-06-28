@@ -1,0 +1,177 @@
+.tour
+  &-form
+    margin-top: 45px
+    padding: 35px 45px 40px
+    background-color: #fff
+    border-radius: 20px
+    &__button
+      padding: 13px 45px 16px
+      min-width: 160px
+  &-info
+    margin-bottom: 95px
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &:last-child
+        margin-bottom: 25px
+      &::before
+        position: absolute
+        content: ''
+        width: 20px
+        height: 2px
+        background-color: $red
+        left: 0
+        bottom: 10px
+    &__text
+      margin-bottom: 26px
+    &__title
+      margin: 60px 0 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+.hero
+  &-form
+    &__input
+      &--region,
+      &--sanatorium
+        width: 250px
+        &:after
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/arrow-down.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 11px
+          height: 7px
+          right: 21px
+          bottom: 22px
+        &.active
+          .region,
+          .sanatoriums
+            &-list
+              display: block
+.region,
+.sanatoriums
+  &-list
+    position: absolute
+    padding: 25px 25px 15px !important
+    top: 55px
+    left: 0
+    background-color: #fff
+    width: 403px
+    height: min-content
+    max-height: 320px
+    border-radius: 10px
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.06)
+    overflow-y: auto
+    display: none
+    z-index: 20
+  &-label
+    display: block
+    margin-bottom: 10px
+    transition: all, 0.3s
+    cursor: pointer
+    &--active
+      color: $red
+    & .jq-checkbox
+      margin-right: 17px
+      width: 14px
+      height: 14px
+      background-color: #e4e4e4
+      border-radius: 4px
+      left: 0
+      &.checked
+        &::after
+          background-image: url('../images/icons/checked-black.svg')
+          width: 10px
+          height: 10px
+.sublist
+  margin-left: 35px
+.tags
+  &-region,
+  &-sanatoriums
+    display: none
+    &.active
+      display: block
+  &__title
+    margin: 35px auto 15px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+  &-list
+    display: flex
+    &__item
+      margin-right: 10px
+      padding: 8px 10px 11px 25px
+      display: flex
+      align-items: center
+      background-color: $grey
+      border-radius: 23.5px
+      &:last-child
+        margin-right: 0
+    &__text
+      min-width: max-content
+      margin-right: 10px
+  &-close
+    width: 16px
+    height: 16px
+
+@media (max-width: 1400px)
+  .tour-form
+    & .form-wrapper
+      gap: 10px
+      justify-content: center
+    &__button
+      padding: 14px
+    .hero
+      &-form
+        &__input
+          &--region,
+          &--sanatorium
+            width: 220px
+
+@media (max-width: 1200px)
+  .tour-form
+    &__title
+      text-align: center
+    &__button
+      margin-top: 0
+    & .form-wrapper
+      flex-direction: column
+      align-items: center
+    &__button
+      width: 50%
+    .hero
+      &-form
+        &__input
+          &--region,
+          &--sanatorium,
+          &--people,
+          &--calendar
+            width: 50%
+
+@media (max-width: 992px)
+  .tour-form
+    &__button
+      width: 100%
+    .hero
+      &-form
+        &__input
+          &--region,
+          &--sanatorium,
+          &--calendar,
+          &--people
+            width: 100%
+          &--calendar
+            margin-bottom: 0
+@media (max-width: 576px)
+  .tour-form
+    padding: 35px 20px
+    &__title
+      font-size: 13px
+      line-height: 24px
+
+@media (max-width: 576px)
+  .tags
+    display: none

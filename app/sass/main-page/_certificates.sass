@@ -1,0 +1,52 @@
+.certificates
+  margin-bottom: 160px
+  &__title
+    margin-bottom: 65px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__img
+    width: 228px
+    height: 300px
+    img
+      object-fit: cover
+      object-position: center -8px
+      width: 100%
+      max-width: 100%
+  & .slick
+    overflow: hidden
+    &-dots
+      bottom: -60px
+      left: 0px
+    &-slide
+      margin: 0 15px
+    &-list
+      margin-left: -15px
+      margin-right: -15px
+  &  .slider
+    &__arrow
+      &--left
+        bottom: 59%
+      &--right
+        top: 55%
+
+@media (max-width: 1400px)
+  .certificates
+    &__img
+      height: 260px
+
+@media (max-width: 1200px)
+  .certificates
+    margin-bottom: 120px
+    &__title
+      font-size: 36px
+      line-height: 42px
+    &__img
+      height: 210px
+
+@media (max-width: 992px)
+  .certificates
+    display: none

@@ -1,0 +1,305 @@
+.breadcrumbs
+  &-agency
+    position: absolute
+    padding: 43px 45px 47px
+    width: 365px
+    border-radius: 10px
+    background-color: #fff
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    top: 25%
+    right: 17.5%
+    &__name
+      margin-bottom: 15px
+    &__bottom
+      display: flex
+      justify-content: space-between
+    &__button
+      border: none
+      background-color: transparent
+      color: $red
+    &__reduction
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #898989
+      border: none
+      background-color: transparent
+.agency
+  &-account
+    margin: 120px auto 120px
+  &-nav
+    margin-bottom: 25px
+    background-color: #fff
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.06)
+    border-radius: 10px
+    &__list
+      display: flex
+      justify-content: space-between
+      @extend %title-font
+      font-size: 16px
+      line-height: 22px
+    &__link
+      transition: all 0.3s
+    &__item
+      position: relative
+      padding-right: 20px
+      padding-top: 15px
+      padding-bottom: 18px
+      &:first-child
+        padding-left: 20px
+      &::after
+        position: absolute
+        content: ''
+        height: 100%
+        width: 1px
+        background-color: $grey
+        right: 0
+        bottom: 0
+        top: 0
+      &:last-child
+        &::after
+          display: none
+    &__title
+      color: $red
+    &__link
+      color: $black
+  &-bonus
+    position: relative
+    display: inline-block
+    padding-left: 35px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: #898989
+    &::after
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/bonus.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 25px
+      height: 25px
+      left: 0
+      top: 2px
+  &-commission
+    position: relative
+    padding: 60px 0
+    &::after
+      position: absolute
+      content: ''
+      background-color: $grey
+      height: 1px
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+    &__title
+      margin-bottom: 60px
+      @extend %title-font
+      font-size: 40px
+      line-height: 48px
+    &__button
+      margin-top: 35px
+      margin-bottom: 35px
+      padding: 15px 15px 18px
+      display: block
+      width: 400px
+      text-align: center
+    &__link
+      font-weight: 600
+      color: $red
+  &-news
+    padding-top: 60px
+    &__title
+      margin-bottom: 60px
+      @extend %title-font
+      font-size: 40px
+      line-height: 48px
+    &__list
+      display: flex
+      justify-content: space-between
+      flex-wrap: wrap
+      gap: 30px
+    &__item
+      position: relative
+      width: 400px
+      filter: drop-shadow(0px 15px 30px rgba(0,0,0,0.06))
+      background-color: #fff
+      border-radius: 20px
+    &__img
+      height: 225px
+      width: 100%
+      object-fit: cover
+      border-radius: 20px
+    &__info
+      padding: 35px 45px 55px
+    &__text
+      margin-bottom: 115px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__button
+      display: block
+      padding: 15px 42px 18px
+    &__date
+      position: relative
+      padding-left: 35px
+      color: #898989
+      margin-bottom: 25px
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/calendar.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 20px
+        height: 20px
+        left: 0
+        top: 3px
+    &__bottom
+      position: absolute
+      bottom: 40px
+      left: 45px
+    & .pagination
+      margin-bottom: 0
+  &-wrapper
+    display: none
+    &__title
+      @extend %title-font
+      color: $red
+    &__item
+      @extend %title-font
+      position: relative
+      font-size: 20px
+      line-height: 28px
+      padding: 19px 0 22px
+      &:first-child
+        padding-top: 30px
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: #F3F3F3
+        bottom: 0
+        left: 0
+        right: 0
+      &:last-child
+        padding-bottom: 0
+        &::after
+          display: none
+    &__link
+      color: $black
+
+@media (max-width: 1400px)
+  .breadcrumbs
+    &-agency
+      top: 16%
+      right: 11%
+  .agency
+    &-news
+      &__item
+        width: 353px
+    &-nav
+      &__item
+        padding-right: 13px
+
+@media (max-width: 1200px)
+  .agency
+    &-nav
+      &__list
+        font-size: 13px
+        line-height: 17px
+    &-news
+      &__item
+        width: 48%
+
+@media (max-width: 992px)
+  .breadcrumbs
+    &--agency
+      padding-bottom: 170px
+    &-agency
+      padding: 16px 20px
+      font-size: 12px
+      line-height: 20px
+      top: auto
+      right: auto
+      bottom: 49px
+      &__reduction
+        padding-left: 0
+        font-size: 12px
+        line-height: 20px
+  .agency
+    &-account
+      margin: 60px auto
+    &-commission
+      padding: 30px 0
+    &-news
+      &__item
+        width: 47%
+    &-nav
+      display: none
+    &-wrapper
+      display: block
+      margin-bottom: 50px
+      background-color: #fff
+      box-shadow: 0px 15px 30px rgba(0,0,0,0.06)
+      padding: 17px 25px 18px 45px
+      &__list
+        display: none
+      &__title
+        padding-right: 20px
+        font-size: 20px
+        line-height: 28px
+        border-radius: 10px
+
+@media (max-width: 767px)
+  .agency
+    &-wrapper
+      padding: 17px 25px
+      &__title,
+      &__item
+        font-size: 16px
+        line-height: 20px
+    &-news
+      &__text
+        font-size: 17px
+        line-height: 24px
+      &__info
+        padding: 20px 20px 50px
+      &__bottom
+        left: 20px
+
+@media (max-width: 576px)
+  .breadcrumbs
+    &-agency
+      width: 320px
+  .agency
+    &-news
+      &__item
+        width: 100%
+      &__title
+        margin-bottom: 30px
+        font-size: 26px
+        line-height: 35px
+    &-commission
+      &__title
+        margin-bottom: 30px
+        font-size: 26px
+        line-height: 35px
+      &__text
+        font-size: 13px
+        line-height: 24px
+      &__button
+        width: 100%
+
+@media (max-width: 360px)
+  .agency
+    &-news
+      &__img
+        height: 225px
+  .breadcrumbs
+    &-agency
+      width: 270px

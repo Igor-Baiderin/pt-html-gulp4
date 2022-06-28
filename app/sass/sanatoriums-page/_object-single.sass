@@ -1,0 +1,934 @@
+.aside
+  &-banner
+    margin-bottom: 23px
+    display: inline-block
+    &--mobile
+      display: none
+  &-form
+    &__input
+      border-color: #fff
+.object
+  margin: 120px auto 60px
+  &-inner
+    margin-top: 120px
+    display: flex
+    justify-content: space-between
+  &-aside
+    position: relative
+    width: 400px
+    &__title
+      margin-bottom: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__button
+      margin-bottom: 112px
+      padding: 17px
+      display: inline-block
+      width: 100%
+      text-align: center
+      border: none
+  &-address
+    margin-bottom: 35px
+    padding: 30px 40px
+    width: 100%
+    background-color: $grey
+    border-radius: 10px
+    &--mobile
+      display: none
+    &-top
+      margin-bottom: 17px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap
+    &__link
+      @extend %title-font
+      font-size: 14px
+      line-height: 26px
+      color: $black
+      text-decoration: underline
+      transition: all, 0.3s
+    &__title
+      position: relative
+      padding-left: 26px
+      font-size: 12px
+      line-height: 15px
+      color: #898989
+      &::before
+        position: absolute
+        content: ''
+        width: 10px
+        height: 14px
+        background-image: url('../images/icons/marker.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        left: 2px
+        top: 0px
+    &__text
+      margin-bottom: 25px
+      font-weight: 600
+      font-size: 15px
+      line-height: 26px
+    &__button
+      display: inline-block
+      padding: 15px 15px 18px
+      width: 100%
+      @extend %title-font
+      border: none
+      color: $black
+      font-size: 16px
+      line-height: 20px
+      text-align: center
+      background-color: #fff
+      border-radius: 10px
+  &-list
+    position: sticky
+    top: 143px
+    &__item
+      position: relative
+      padding: 20px 0 23px
+      &:first-child
+        padding-top: 0
+      &::after
+        position: absolute
+        content: ''
+        background-color: #E4E4E4
+        height: 1px
+        width: 100%
+        bottom: 0
+        left: 0
+        right: 0
+    &__link
+      display: flex
+    &__title
+      color: $black
+    &__num
+      margin-right: 20px
+      font-weight: 600
+      color: $red
+  &-content
+    max-width: 760px
+  &-slider
+    max-width: 760px
+    margin-bottom: 100px
+    &__item
+      width: 128px
+      height: 70px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    & .slick
+      overflow: hidden
+      &-slide
+        margin: 0 15px
+        height: 70px
+      &-list
+        margin-left: -15px
+        margin-right: -15px
+    & .slider
+      &__arrow
+        &--left
+          left: -65px
+          bottom: 50%
+          transform: translate(0, 50%)
+        &--right
+          top: 50%
+          transform: translate(0,-50%)
+          right: -67px
+  &-sliderbig
+    margin-bottom: 30px
+    &__item
+      width: 760px
+      height: 458px
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    & .slick
+      overflow: hidden
+      &-slide
+        margin: 0 15px
+        height: 458px
+        width: 760px
+      &-list
+        margin-left: -15px
+        margin-right: -15px
+  &-info
+    &__wrapper--discount
+      display: none
+    &__discount
+      margin-right: 25px
+    &__title
+      padding-right: 15px
+    &__item
+      margin-bottom: 60px
+    &__top
+      margin-bottom: 35px
+      display: flex
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__num
+      margin-right: 25px
+      color: $red
+    &__text
+      margin-bottom: 26px
+      &--mb
+        margin: 35px auto !important
+      &--bold
+        font-weight: 600
+      &:last-child
+        margin-bottom: 0
+    &__sliders
+      width: 760px
+      margin-top: 35px
+      & .slick
+        overflow: hidden
+        &-slide
+          margin: 0 15px
+          height: 200px
+        &-list
+          margin-left: -15px
+          margin-right: -15px
+      & .slider
+        &__arrow
+          &--left
+            left: -65px
+            bottom: 52%
+            transform: translate(0, 50%)
+          &--right
+            top: 50%
+            transform: translate(0, -50%)
+            right: -65px
+    &__slider
+      max-width: 365px
+      height: 200px
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__content
+      display: none
+    &__list
+      margin-top: 20px
+      &-item
+        margin-bottom: 25px
+        &:first-child
+          margin-top: 30px
+      &-title
+        font-family: 'Open Sans', sans-serif
+        border: 2px solid $grey
+        font-weight: 600
+        padding: 15px
+        background-color: $grey
+      & .filter__item-drop::after
+        top: 45%
+        right: 25px
+    &__photos
+      margin-top: 25px
+      margin-bottom: 25px
+      display: flex
+      justify-content: space-between
+    &__photo
+      width: 360px
+      height: 200px
+      object-fit: cover
+    &__table
+      width: 100%
+      border-spacing: 0
+      max-width: 100%
+      overflow-x: auto
+      border-collapse: collapse
+      th
+        border: 1px solid #ccc
+        vertical-align: middle
+        padding: 10px
+        background-color: #f7f7f7
+      td:not(:first-child)
+        text-align: center
+      td
+        border: 1px solid #ccc
+        vertical-align: middle
+        padding: 10px
+  &-services
+    &__lists
+      display: flex
+      & .object-services__list
+        &:first-child
+          margin-right: 143px
+      & .object-services__item
+        &:last-child
+          margin-bottom: 0
+    &__item
+      position: relative
+      padding-left: 40px
+      margin-bottom: 10px
+      &::before
+        position: absolute
+        content: ''
+        width: 20px
+        height: 2px
+        background-color: $red
+        left: 0
+        top: 13px
+      &--mb
+        margin-bottom: 15px
+      &-title
+        margin-bottom: 5px
+        font-weight: 600
+        font-size: 15px
+        line-height: 26px
+      &-text
+        margin-bottom: 15px
+    &__element
+      margin-left: 15px
+      &:first-child
+        margin-top: 35px
+  &-reviews
+    &--all
+      margin-bottom: 120px
+    &__top
+      margin-bottom: 60px
+      display: flex
+      justify-content: space-between
+    &__num
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #898989
+    & .review
+      margin-bottom: 35px
+      background-color: $grey
+      filter: none
+      &-content
+        max-width: 575px
+        margin-left: 75px
+        float: none
+      &__num
+        z-index: 1
+        &--positive
+          color: #29BC26
+      &-grade
+        &--positive
+          color: #29BC26
+      &::before
+        background-image: url("../images/icons/flag-white.svg")
+        z-index: 0
+    &__bottom
+      margin-top: 60px
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__button
+      padding: 17px 45px
+  &-discounts
+    display: flex
+    flex-wrap: wrap
+    gap: 30px
+    justify-content: space-between
+    &__item
+      max-width: 365px
+      padding: 25px 45px 30px
+      background-color: $grey
+    &__title
+      margin-bottom: 10px
+    &__text
+      position: relative
+      padding-left: 35px
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/calendar.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 20px
+        height: 20px
+        left: 0
+  & .rooms-favorite__button
+    &::after
+      background-image: url('../images/icons/favorite-notactive.svg')
+    &--active
+      &::after
+        background-image: url('../images/icons/favorite.svg')
+.ski
+  &-slider
+    margin-bottom: 35px
+.sport
+  &-slider
+    margin-bottom: 35px
+.modal
+  &-profiles
+    &__dialog
+      width: 885px
+      max-width: 100%
+      &--visible
+        visibility: visible
+        opacity: 1
+        z-index: 60
+    &__title
+      margin-top: 25px
+      margin-bottom: 35px
+      text-align: left
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__list
+      text-align: left
+    &__item
+      position: relative
+      margin-bottom: 10px
+      padding-left: 40px
+      text-decoration: underline
+      transition: all 0.3s
+      &:last-child
+        margin-bottom: 0
+      &::before
+        position: absolute
+        content: ''
+        left: 0
+        top: 15px
+        background-color: $red
+        height: 2px
+        width: 20px
+  &-reviews
+    &__dialog
+      padding: 45px
+      width: 885px
+      max-width: 100%
+      &--visible
+        visibility: visible
+        opacity: 1
+    &__title
+      margin-bottom: 35px
+      text-align: left
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+  &-address,
+  &-room,
+  &-description
+    &__dialog
+      max-width: 885px
+      width: 100%
+      text-align: left
+      height: 652px
+      overflow: none
+      &--visible
+        visibility: visible
+        opacity: 1
+    &__wrapper
+      overflow: auto
+      height: 100%
+    &__title
+      margin-bottom: 38px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $red
+      &--small
+        margin-bottom: 26px
+        font-family: 'Open Sans', sans-serif
+        font-weight: 700
+        font-size: 18px
+        line-height: 28px
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+      &--bold
+        font-family: 'Open Sans', sans-serif
+        font-weight: 700
+  &-room,
+  &-description
+    &__dialog
+      height: max-content
+.reviews
+  &-form
+    &-input,
+    &-select
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      width: 100%
+      flex-shrink: 1 !important
+    input,
+    textarea
+      &::placeholder
+        color: #898989
+    &__inputs
+      display: flex
+      justify-content: space-between
+      gap: 20px
+    &__info
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+      text-align: left
+  &-area
+    width: 100%
+    height: 244px
+    border: 2px solid #E4E4E4
+    border-radius: 10px
+    padding-top: 12px
+    padding-left: 25px
+    padding-bottom: 12px
+    resize: none
+  &-range
+    margin: 31px auto 21px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+      display: flex
+      width: 228px
+      margin-bottom: 10px
+      align-items: center
+      justify-content: space-between
+  &-bottom
+    margin: 20px auto
+    display: flex
+    justify-content: space-between
+    gap: 20px
+    input
+      width: 530px
+    &__button
+      padding: 15px 20px 18px
+      width: 245px
+.select
+  &-visit,
+  &-country,
+  &-office,
+  &-theme
+    &.jq-selectbox
+      position: relative
+    & .jq-selectbox__select-text
+      font-family: 'Open Sans', sans-serif
+      font-size: 15px
+      line-height: 26px
+      font-weight: 400
+      border: 2px solid #E4E4E4
+      border-radius: 10px
+      padding-top: 12px
+      padding-left: 25px
+      padding-bottom: 12px
+      min-width: 250px
+      text-align: left
+      color: #898989
+      &::before
+        display: none
+      &::after
+        right: 20px
+        top: 21px
+      &.placeholder
+        text-align: left
+    & .jq-selectbox__dropdown
+      min-width: 250px
+      text-align: left
+.mfp-counter
+  display: none
+.jq-selectbox
+  z-index: 10
+.tour-form
+  background: #fff
+  z-index: 11
+  transition: box-shadow .3s ease
+.tour-form.sticky .tags
+  display: none
+.tour-form.sticky
+  position: fixed
+  top: 0
+  left: 50%
+  width: 100%
+  transform: translateX(-50%)
+  margin-top: 0
+  padding: 35px 15% 40px
+  box-shadow: 0 0 10px rgba(0,0,0,.2)
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+  background-color: #F3F3F3
+  border-radius: 0
+  & .form-wrapper
+    width: 1170px
+    margin: 0 auto
+.object-info__list-title.filter__item-drop::after
+  display: block
+.button-mobile
+  display: none
+  @extend %title-font
+  font-size: 16px
+  line-height: 20px
+  padding: 13px 13px 14px
+  background-color: $grey
+  color: #000
+  text-align: center
+  z-index: 9
+
+@media (max-width: 1600px)
+  .object
+    margin: 50px auto
+  .tour-form.sticky
+    padding: 35px 10% 40px
+
+@media (max-width: 1400px)
+  .object
+    &-aside
+      width: 300px
+    &-address
+      padding: 30px 30px
+  .tour-form.sticky
+    padding: 35px 8% 40px
+    & .form-wrapper
+      width: 1055px
+
+@media (max-width: 1200px)
+  .object
+    &-inner
+      margin-top: 70px
+    &-content
+      width: 560px
+    &-info
+      &__sliders
+        width: 560px
+        & .slider
+          &__arrow
+            &--left
+              left: -40px
+            &--right
+              right: -40px
+      &__photos
+        gap: 20px
+      &__photo
+        width: 100%
+    &-list
+      top: 23px
+    &-slider
+      & .slider
+        &__arrow
+          &--left
+            left: -40px
+          &--right
+            right: -40px
+    &-reviews
+      &--all
+        margin-bottom: 70px
+      & .review
+        padding: 35px 40px 35px 40px
+        &::before
+          left: 30px
+        &-content
+          margin-left: 0
+    &-discounts
+      &__item
+        max-width: 265px
+        padding: 25px
+  .modal
+    &-profiles
+      &__dialog
+        width: 500px
+    &-address,
+    &-room,
+    &-description
+      &__dialog
+        max-width: 85%
+
+@media (max-width: 992px)
+  .aside
+    &-banner
+      display: none
+      &--mobile
+        display: block
+        margin: 70px auto 30px
+        img
+          margin: 70px auto 30px
+  .object
+    &-inner
+      flex-direction: column
+      align-items: center
+    &-list
+      display: none
+    &-address
+      display: none
+      &--mobile
+        display: block
+        margin-bottom: 15px
+        margin-top: 50px
+    &-aside
+      &__title
+        display: none
+      &__button
+        margin-bottom: 30px
+        &--reviews
+          display: none
+    &-content
+      width: 100%
+    &-info
+      &__item
+        margin-bottom: 30px
+      &__top
+        margin-bottom: 0
+        padding-bottom: 25px
+      &__wrapper
+        display: none
+      &__sliders
+        width: 100%
+    & .filter
+      &__item
+        &-drop
+          &::after
+            display: block
+          &::before
+            display: none
+    &-sliderbig
+      &__item
+        height: 320px
+      & .slick
+        &-slide
+          height: 320px
+    &-slider
+      margin-bottom: 50px
+    &-discounts
+      &__item
+        max-width: 320px
+  .modal
+    &-reviews
+      &__dialog
+        width: 90%
+      &__title
+        margin-bottom: 30px
+        font-size: 16px
+        line-height: 20px
+        text-align: center
+    &-address,
+    &-room,
+    &-description
+      &__title
+        font-size: 16px
+        line-height: 21px
+        &--small
+          font-size: 16px
+          line-height: 21px
+      &__text
+        font-size: 14px
+        line-height: 21px
+  .reviews
+    &-form
+      &__inputs
+        width: 60%
+        margin: 0 auto
+        gap: 15px
+        flex-direction: column
+      input
+        &:last-child
+          margin-left: 0
+    &-area
+      height: 200px
+    &-range
+      justify-content: space-around
+      &__item
+        margin-right: 10px
+  .object-info__list-title.filter__item-drop::before
+    display: none
+
+@media (max-width: 767px)
+  .object
+    &-reviews
+      & .review
+        padding: 35px
+        &::before
+          left: 24px
+        &__num
+          margin-right: 30px
+    &-discounts
+      &__item
+        max-width: 258px
+  .reviews
+    &-bottom
+      &__button
+        width: 40%
+
+@media (max-width: 630px)
+  .object
+    &-discounts
+      gap: 15px
+      &__item
+        max-width: 100%
+        width: 100%
+
+@media (max-width: 650px)
+  .reviews
+    &-bottom
+      flex-direction: column
+      input
+        width: 100%
+      &__button
+        width: 100%
+    &-form
+      &__inputs
+        width: 100%
+
+@media (max-width: 576px)
+  .object
+    margin-bottom: 30px
+    &-inner
+      margin-top: 50px
+    &-sliderbig
+      & .slick
+        &-slide
+          height: 200px
+      & .slider
+        &__arrow
+          background-color: #fff
+          border-radius: 50%
+          padding: 0px
+          &--left
+            left: 20px
+            transform: translate(0,50%)
+            bottom: 50%
+          &--right
+            right: 20px
+            top: 50%
+            transform: translate(0,-50%)
+    &-info
+      font-size: 13px
+      line-height: 24px
+      &__top
+        font-size: 13px
+        line-height: 24px
+    &-services
+      &__lists
+        & .object-services__list
+          &:first-child
+            margin-right: 20px
+      &__item
+        &-title
+          font-size: 13px
+          line-height: 24px
+    &-reviews
+      &__top
+        flex-direction: column
+        margin-bottom: 50px
+      &__num
+        margin-bottom: 25px
+        font-size: 16px
+        line-height: 20px
+      & .review
+        margin-bottom: 20px
+        padding: 20px 20px 35px
+        &__num
+          margin-left: 18px
+          font-size: 16px
+          line-height: 20px
+        &__name
+          font-size: 13px
+          line-height: 24px
+        &__description
+          font-size: 10px
+          line-height: 16px
+        &-grade
+          width: 270px
+          font-weight: 400
+          font-size: 10px
+          line-height: 16px
+        &__text
+          margin-bottom: 15px
+        &-bottom
+          flex-direction: column
+        &__button
+          margin-bottom: 20px
+  .modal
+    &-profiles
+      &__dialog
+        padding: 15px 15px 25px 25px
+        width: 90%
+      &__title
+        margin-top: 10px
+        margin-bottom: 15px
+        font-size: 17px
+        line-height: 23px
+      &__item
+        font-size: 13px
+        line-height: 18px
+    &-reviews
+      &__dialog
+        padding: 50px 15px
+    &-address,
+    &-room,
+    &-description
+      &__title
+        margin-bottom: 20px
+        &--small
+          margin-bottom: 20px
+      &__text
+        margin-bottom: 20px
+  .reviews
+    &-range
+      &__category
+        font-size: 13px
+        line-height: 24px
+  .button-mobile
+    display: block
+    position: fixed
+    bottom: 0
+    right: 0
+    left: 0
+    width: 100%
+
+@media (max-width: 500px)
+  .object
+    &-aside
+      &__button
+        padding: 17px 5px
+    &-info
+      &__slider
+        max-width: 100%
+      &__sliders
+        & .slider
+          &__arrow
+            background-color: #fff
+            border-radius: 50%
+            padding: 0px
+            &--left
+              left: 20px
+              transform: translate(0,50%)
+              bottom: 50%
+            &--right
+              right: 20px
+              top: 50%
+              transform: translate(0,-50%)
+      &__photos
+        flex-direction: column
+      &__photo
+        height: 180px
+    &-services
+      &__lists
+        flex-direction: column
+    &-reviews
+      &__bottom
+        flex-direction: column
+      &__button
+        margin-bottom: 15px
+    &-address
+      padding: 25px 30px
+      &__text
+        font-weight: 400
+        font-size: 13px
+
+@media (max-width: 360px)
+  .object
+    &-reviews
+      & .review
+        &-grade
+          width: 93%
+  .modal
+    &-address,
+    &-room,
+    &-description
+      &__dialog
+        padding: 45px 20px

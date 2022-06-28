@@ -1,0 +1,113 @@
+.payment
+  &-list
+    &__content
+      margin-bottom: 28px
+      padding-bottom: 60px
+      display: none
+      &--mb
+        margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
+    &__item
+      position: relative
+      padding-top: 30px
+      cursor: pointer
+      transition: all, 0.3s
+      &:first-child
+        padding-top: 0
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $grey
+        bottom: 0
+        left: 0
+        right: 0
+    &__name
+      display: flex
+      padding-bottom: 36px
+      padding-right: 35px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__num
+      margin-right: 25px
+      color: $red
+    &__text
+      margin-bottom: 26px
+      &--mb
+        margin-bottom: 0
+      &--red
+        color: $red
+        margin-bottom: 0
+    &__button
+      margin-top: 7px
+      display: inline-block
+      padding: 15px 68px 18px
+  & .contacts
+    &-list
+      margin-top: 35px
+      &__item
+        width: 365px
+        &:last-child
+          margin-bottom: 0
+  &-conditions
+    margin: 35px auto
+    &__item
+      position: relative
+      margin-bottom: 10px
+      padding-left: 40px
+      &::before
+        position: absolute
+        content: ''
+        height: 2px
+        width: 20px
+        background-color: $red
+        left: 0
+        top: 15px
+
+@media (max-width: 1400px)
+  .payment
+    & .contacts
+      &-list
+        &__item
+          width: 320px
+
+@media (max-width: 1200px)
+  .payment
+    & .contacts
+      &-list
+        &__item
+          width: 280px
+
+@media (max-width: 992px)
+  .payment
+    & .contacts
+      &-list
+        &__item
+          width: 100%
+
+@media (max-width: 576px)
+  .payment
+    &-list
+      &__name
+        padding-bottom: 30px
+        font-size: 16px
+        line-height: 20px
+      &__item
+        padding-top: 25px
+      &__text
+        margin-bottom: 24px
+        font-size: 13px
+        line-height: 24px
+        &--mb
+          margin-bottom: 0
+        &--red
+          margin-bottom: 0
+      &__button
+        width: 100%
+        text-align: center
+      &__content
+        padding-bottom: 30px
+        margin-bottom: 0

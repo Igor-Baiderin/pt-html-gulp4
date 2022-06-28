@@ -1,0 +1,115 @@
+//Стилизация секции review
+.reviews
+  margin: 92px auto
+  &__title
+    margin-bottom: 65px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  & .slick
+    overflow: hidden
+    &-slide
+      margin: 0 15px
+    &-list
+      margin-left: -15px
+      margin-right: -15px
+  & .slider
+    &__arrow
+      &--left
+        bottom: 58%
+      &--right
+        top: 52%
+.review
+  position: relative
+  margin-bottom: 25px
+  filter: drop-shadow(0px 15px 13px rgba(0,0,0,0.06))
+  padding: 35px 57px 35px 55px
+  background-color: #FFF
+  border-radius: 20px
+  &::before
+    content: ''
+    position: absolute
+    background-image: url('../images/icons/flag.svg')
+    background-repeat: no-repeat
+    background-size: cover
+    width: 48px
+    height: 83px
+    z-index: -1
+    left: 45px
+    top: 0px
+  &-top
+    display: flex
+  &-content
+    max-width: 1075px
+    float: right
+  &__num
+    margin-right: 48px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: $red
+  &__title
+    margin-bottom: 25px
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+  &__name
+    margin-bottom: 3px
+    font-weight: 700
+    font-size: 14px
+    line-height: 22px
+  &__description
+    margin-bottom: 25px
+    line-height: 22px
+    color: #898989
+  &-grade
+    margin-bottom: 18px
+    width: 400px
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    color: $red
+    &__item
+      margin-bottom: 10px
+      font-weight: 600
+  &__text
+    margin-bottom: 28px
+    max-height: 55px
+    overflow: hidden
+    &--full
+      max-height: 100%
+      overflow: auto
+      margin-bottom: 28px
+  &-bottom
+    display: flex
+    justify-content: space-between
+  &-buttons.open
+    .review__button
+      &:last-child
+        display: block
+      &:first-child
+        display: none
+  &__button
+    @extend %title-font
+    font-size: 16px
+    line-height: 28px
+    border: none
+    background-color: transparent
+    border-bottom: 2px dotted black
+    &:last-child
+      display: none
+    &:first-child
+      display: block
+  &__date
+    line-height: 22px
+    color: #898989
+
+@media (max-width: 1200px)
+  .reviews
+    &__title
+      font-size: 36px
+      line-height: 42px
+
+@media (max-width: 992px)
+  .reviews
+    display: none

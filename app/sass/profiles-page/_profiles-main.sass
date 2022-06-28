@@ -1,0 +1,138 @@
+.profile
+  margin: 120px auto
+  &-item
+    display: flex
+    justify-content: space-between
+    margin-bottom: 30px
+    min-width: 360px
+    &:last-child
+      margin-bottom: 0
+    &--yellow
+      background-color: #FFFFF4
+    &--blue
+      background-color: #F4FDFF
+    &--red
+      background-color: #FFF4F4
+    &--green
+      background-color: #F5FFF4
+    &__img
+      width: 360px
+      object-fit: cover
+      min-width: 360px
+      &--position1
+        object-position: 70% 0
+      &--position2
+        object-position: 78% 0
+      &--height
+        height: 330px
+    &__content
+      padding: 60px 46px 60px 70px
+    &__title
+      margin-bottom: 20px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__text
+      margin-bottom: 26px
+  &-destination
+    position: relative
+    margin-bottom: 25px
+    padding-left: 20px !important
+    display: flex
+    flex-wrap: wrap
+    &::before
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/marker.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 10px
+      height: 14px
+      left: 0
+      top: 2px
+    &__item
+      margin-right: 6px
+      font-size: 12px
+      line-height: 16px
+      &::after
+        position: absolute
+        content: ','
+        color: #898989
+      &:last-child
+        &::after
+          display: none
+      a
+        color: #898989
+        text-decoration: underline
+  &-info
+    margin-top: 120px
+    margin-bottom: 140px
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+
+@media (max-width: 1400px)
+  .profile
+    margin: 70px auto
+    &-item
+      &__img
+        min-width: 420px
+        width: 420px
+        &--height
+          height: 360px
+      &__content
+        padding: 40px 25px 40px 40px
+    &-info
+      margin-top: 70px
+      margin-bottom: 70px
+
+@media (max-width: 992px)
+  .profile
+    &-item
+      flex-direction: column
+      &__img
+        min-width: 100%
+        width: 100%
+        height: 320px
+        &--position3
+          object-position: 0px 26%
+
+@media (max-width: 767px)
+  .profile
+    &-item
+      &__img
+        height: 290px
+
+@media (max-width: 576px)
+  .profile
+    margin: 50px auto
+    &-item
+      &__img
+        height: 260px
+      &__content
+        padding: 25px 20px 30px
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__text
+        display: none
+      &__link
+        font-size: 16px
+        line-height: 20px
+    &-destination
+      margin-bottom: 20px
+      &__item
+        font-size: 10px
+    &-info
+      &__text
+        margin-bottom: 24px
+        font-size: 13px
+        line-height: 24px
+
+@media (max-width: 440px)
+  .profile
+    &-item
+      min-width: 100%
+      &__img
+        height: 200px

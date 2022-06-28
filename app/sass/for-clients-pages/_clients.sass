@@ -1,0 +1,134 @@
+.clients
+  margin: 120px auto
+  &-list
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    gap: 30px
+    &__item
+      padding: 45px
+      border-radius: 10px
+      width: 400px
+      min-height: 197px
+      background-color: #F3F3F3
+      cursor: pointer
+      transition: all 0.3s
+    &__img
+      margin-bottom: 20px
+      background-color: #E0292A
+      border-radius: 50%
+      padding: 22px
+      min-width: 50px
+      height: 74px
+      max-width: 74px
+    &__title
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $black
+    &__link
+      &--last
+        display: flex
+        justify-content: space-between
+    &__text
+      @extend %title-font
+      max-width: 190px
+      font-size: 30px
+      line-height: 38px
+      color: #898989
+
+@media (max-width: 1400px)
+  .clients
+    margin: 70px auto
+    &-list
+      &__item
+        width: 352px
+
+@media (max-width: 1200px)
+  .clients
+    &-list
+      justify-content: space-around
+      &__item
+        width: 400px
+
+@media (max-width: 992px)
+  .about
+    &-company
+      &--mobile
+        display: block
+  .clients
+    &-list
+      justify-content: space-between
+      &__item
+        width: 320px
+
+@media (max-width: 767px)
+  .clients
+    margin: 50px auto
+    &-list
+      &__item
+        width: 100%
+  .about
+    &-company
+      &--mobile
+        margin: 70px auto
+      &__wrapper
+        flex-direction: column
+      &__img
+        margin-bottom: 30px
+        margin-right: 0
+        width: 100%
+        height: 250px
+      &__list
+        justify-content: space-around
+
+@media (max-width: 576px)
+  .clients
+    &-list
+      &__item
+        padding: 30px
+        min-height: auto
+        &:last-child
+          display: none
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__img
+        padding: 15px
+        min-width: 50px
+        height: 60px
+  .about
+    &-company
+      &__item
+        margin-bottom: 30px
+        width: 150px
+      &__description
+        font-size: 13px
+        line-height: 24px
+        margin-bottom: 24px
+      &__list
+        margin: 0 auto 0
+      &__num
+        font-size: 16px
+        line-height: 20px
+      &__text
+        font-size: 13px
+        line-height: 24px
+      &__link
+        font-size: 16px
+        line-height: 28px
+        &::after
+          width: 193px
+
+@media (max-width: 400px)
+  .about
+    &-company
+      &__img
+        height: 180px
+
+@media (max-width: 340px)
+  .about
+    &-company
+      &__item
+        width: 100%
+        max-width: 100%

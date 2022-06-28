@@ -1,0 +1,112 @@
+html
+	scroll-behavior: smooth
+	width: 100%
+	max-width: 100%
+	overflow-x: hidden
+body
+	height: 100%
+	width: 100%
+	max-width: 100%
+	font-family: 'Open Sans', sans-serif
+	font-weight: 400
+	color: $black
+	font-size: 15px
+	line-height: 26px
+	min-width: 320px
+	overflow-x: visible
+
+.wrapper
+	display: flex
+	flex-direction: column
+	min-height: 100%
+
+input
+	outline: none
+
+textarea
+	outline: none
+
+button
+	cursor: pointer
+
+.main
+	flex: 1 0 auto
+
+.footer
+	flex: 0 0 auto
+
+.container
+	max-width: 1290px
+	margin: 0 auto
+	padding: 0 15px
+
+//Элементы ui	
+
+.button--red
+	@extend %title-font
+	color: #fff
+	background-color: $red
+	border: none
+	filter: drop-shadow(0px 10px 15px rgba(224, 41, 42, 0.3))
+	border-radius: 10px
+	transition: all .3s
+	font-size: 16px
+	line-height: 22px
+
+.link-text
+	@extend %title-font
+	position: relative
+	font-size: 20px
+	line-height: 28px
+	color: inherit
+	transition: all 0.3s
+	&::after
+		position: absolute
+		content: ''
+		height: 2px
+		background-color: #1E1E1E
+		left: 0
+		right: 0
+		bottom: 0
+
+.link--grey
+	@extend %title-font
+	font-size: 16px
+	line-height: 22px
+	border-radius: 10px
+	background-color: $grey
+	color: inherit
+	transition: all 0.3s
+
+.button--grey
+	padding: 4px 28px
+	@extend %title-font
+	font-size: 14px
+	line-height: 22px
+	border: none
+	background-color: #898989
+	color: #fff
+	border-radius: 7px
+	transition: all 0.3s
+
+.button--disabled
+	padding: 4px 28px
+	@extend %title-font
+	font-size: 14px
+	line-height: 22px
+	border: none
+	background-color: #898989
+	color: #fff
+	border-radius: 7px
+	cursor: unset
+
+.button--green
+	padding: 4px 40px
+	@extend %title-font
+	font-size: 14px
+	line-height: 22px
+	border: none
+	background-color: #29BC26
+	color: #fff
+	border-radius: 7px
+	transition: all 0.3s

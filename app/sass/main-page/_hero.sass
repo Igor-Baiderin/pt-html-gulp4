@@ -1,0 +1,251 @@
+//Стилизация главной секции
+.hero
+  position: relative
+  min-height: 723px
+  background-image: url(../images/hero-bg.png)
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  &::after
+    content: ''
+    position: absolute
+    width: 100%
+    background-color: rgba(37, 37, 37, 0.35)
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 1
+  &-wrapper
+    position: relative
+    z-index: 2
+    padding: 130px 0
+  &__title
+    margin-bottom: 60px
+    max-width: 600px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+    color: #fff
+  &-form
+    padding: 35px 45px 40px
+    min-height: 173px
+    background-color: rgba(255, 255, 255, 0.2)
+    border-radius: 20px
+    &__title
+      margin-bottom: 15px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+    &__button
+      padding: 14px 61px
+    &__input
+      position: relative
+      &--map
+        width: 520px
+        & input
+          padding-left: 55px !important
+        &::before
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/marker.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 11px
+          height: 15px
+          left: 25px
+          top: 19px
+          z-index: 3
+      &--calendar
+        width: 252px
+      &--calendar,
+      &--calendarsingle
+        &::before
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/calendar.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 20px
+          height: 20px
+          top: 17px
+          right: 20px
+          pointer-events: none
+      &--night
+        &::before
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/moon.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 20px
+          height: 20px
+          top: 17px
+          right: 20px
+          pointer-events: none
+
+      &--people
+        width: 170px
+        &::before
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/people.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 20px
+          height: 20px
+          top: 17px
+          right: 20px
+      &--object
+        width: 352px
+        & input
+          padding-left: 55px !important
+        &::before
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/marker.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 11px
+          height: 15px
+          left: 25px
+          top: 19px
+          z-index: 3
+  &-list
+    margin-top: 60px
+    display: flex
+    font-size: 15px
+    line-height: 26px
+    font-weight: 600
+    color: #fff
+    &__item
+      display: flex
+      align-items: center
+      margin-right: 68px
+      &:last-child
+        margin-right: 0
+    &__img
+      margin-right: 30px
+      background-color: $red
+      border-radius: 50%
+      padding: 23px
+.form
+  &-wrapper
+    display: flex
+    justify-content: space-between
+  & input
+    font-weight: 600
+    border: 2px solid #E4E4E4
+    border-radius: 10px
+    padding-top: 12px
+    padding-bottom: 12px
+    padding-left: 20px
+    width: 100%
+    &::placeholder
+      color: #898989
+
+@media (max-width: 1600px)
+  .hero
+    &-wrapper
+      padding: 90px 0
+
+@media (max-width: 1400px)
+  .hero
+    min-height: 605px
+    &-wrapper
+      padding: 80px 0
+    &__title
+      margin-bottom: 40px
+    &-form
+      &__input
+        &--map
+          max-width: 360px
+          width: 100%
+        &--object
+          width: 280px
+    &-list
+      &__item
+        margin-right: 35px
+
+@media (max-width: 1200px)
+  .hero
+    &-form
+      &__button
+        width: 120px
+        padding: 14px
+      &__input
+        &--map
+          width: 280px
+        &--object,
+        &--calendarsingle,
+        &--night
+          width: 50%
+    &__title
+      font-size: 36px
+      line-height: 45px
+  .form
+    &-wrapper
+      gap: 10px
+
+@media (max-width: 992px)
+  .hero
+    min-height: 700px
+    margin-top: 35px
+    &-wrapper
+      padding-top: 130px
+    &__title
+      font-size: 36px
+      line-height: 44px
+    &-form
+      &__input
+        &--object,
+        &--calendarsingle,
+        &--night
+          width: 100%
+        &--map
+          margin-bottom: 20px
+          width: 100%
+          max-width: none
+          margin-right: 0
+        &--calendar
+          margin-bottom: 20px
+          width: 100%
+          margin-right: 0
+        &--people
+          width: 100%
+      &__button
+        margin-top: 20px
+        width: 100%
+    &-list
+      display: none
+    //&.entry
+
+  .form
+    &-wrapper
+      flex-direction: column
+
+@media (max-width: 576px)
+  .hero
+    &-wrapper
+      padding-top: 75px
+    &__title
+      font-size: 26px
+      line-height: 35px
+      max-width: 320px
+
+@media (max-width: 430px)
+  .hero
+    min-height: 640px
+    &__title
+      margin-bottom: 37px
+    &-wrapper
+      padding-top: 115px
+      padding-bottom: 0
+    &-form
+      background-color: transparent
+      padding-right: 0
+      padding-left: 0
+      &__title
+        font-size: 16px
+        line-height: 20px

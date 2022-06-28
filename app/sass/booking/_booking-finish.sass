@@ -1,0 +1,103 @@
+.booking
+  &-confirmation
+    margin-top: 60px
+    @extend %title-font
+    &__title
+      margin-bottom: 35px
+      font-size: 40px
+      line-height: 48px
+      color: #29BC26
+    &__text
+      margin-bottom: 35px
+      font-size: 20px
+      line-height: 28px
+    &__order
+      margin-bottom: 60px
+      font-size: 20px
+      line-height: 28px
+      color: #898989
+    &__num
+      color: $red
+    &__payment
+      display: inline-block
+      font-size: 16px
+      line-height: 28px
+      border-bottom: 2px dotted $black
+      cursor: pointer
+      transition: all 0.3s
+    &__buttons
+      margin-top: 60px
+      display: flex
+    &__button
+      margin-right: 30px
+      display: inline-block
+      width: 370px
+      padding: 15px 15px 18px
+      text-align: center
+    & .filter__item-drop
+      &::after
+        display: none
+  &-payment
+    &__wrapper
+      display: none
+    &__list
+      margin-top: 35px
+      display: flex
+      gap: 30px
+    &__item
+      font-family: 'Open Sans', sans-serif
+      padding: 35px
+      background-color: $grey
+      width: 270px
+    &__title
+      margin-bottom: 15px
+      font-weight: 600
+    &__text
+      color: #898989
+      font-weight: 400
+
+@media (max-width: 1200px)
+  .booking
+    &-payment
+      &__list
+        flex-wrap: wrap
+
+@media (max-width: 767px)
+  .booking
+    &-confirmation
+      margin-top: 32px
+      &__title
+        margin-bottom: 20px
+        font-size: 26px
+        line-height: 35px
+      &__text
+        margin-bottom: 30px
+        font-size: 16px
+        line-height: 20px
+      &__order
+        margin-bottom: 50px
+        font-size: 16px
+        line-height: 20px
+      &__buttons
+        margin-top: 50px
+        flex-direction: column
+        gap: 20px
+    &-payment
+      &__list
+        margin-top: 30px
+        gap: 10
+      &__item
+        width: 100%
+        padding: 30px
+      &__title
+        font-size: 13px
+        line-height: 24px
+      &__text
+        font-size: 13px
+        line-height: 24px
+
+@media (max-width: 576px)
+  .booking
+    &-confirmation
+      &__button
+        width: 100%

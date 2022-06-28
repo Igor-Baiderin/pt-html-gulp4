@@ -1,0 +1,123 @@
+.daterangepicker
+  padding: 25px 30px 35px
+  font-family: 'Open Sans', sans-serif
+  font-size: 12px
+  font-weight: 600
+  line-height: 16px
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.06)
+  border-radius: 20px
+  border: none
+  z-index: 19
+  width: auto
+  &-wrapper
+    display: flex
+    flex-wrap: wrap
+    column-gap: 50px
+  &:before, &:after
+    display: none
+  .btn-hidden
+    display: none
+  .drp-calendar.left, .drp-calendar.right
+    max-width: none
+    padding: 0
+    .calendar-table
+      padding: 0
+      .prev, .next
+        background-color: $black
+        mask-repeat: no-repeat
+        mask-size: auto
+        &:hover
+          background-color: $red
+        span
+          display: none
+      .prev
+        mask-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.5 11L1.5 6L6.5 1' stroke='%231E1E1E' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+        mask-position: 30% center
+      .next
+        mask-image: url("data:image/svg+xml,%3Csvg width='8' height='12' viewBox='0 0 8 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 11L6.5 6L1.5 1' stroke='%231E1E1E' stroke-width='1.66667' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A")
+        mask-position: 78% center
+  thead
+    th:not(.available)
+      pointer-events: none
+  .calendar-table
+    td, th
+      width: 42px
+      height: 38px
+      border-color: #fff
+      border-radius: 0
+  th.month
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    width: auto
+  .thead-days th
+    font-family: 'Open Sans', sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 10px
+    line-height: 16px
+    color: #898989
+  tr
+    display: flex
+    justify-content: space-between
+    align-items: center
+    td, th
+      display: flex
+      justify-content: center
+      align-items: center
+      &:nth-child(5)
+        margin-right: 8px
+  td.available
+    background-color: $grey
+  .off.disabled
+    background-color: rgba($grey, .4)
+    color: rgba($black, .4)
+    text-decoration: solid
+    pointer-events: none
+  .off.ends
+    height: 0
+    background-color: transparent
+    pointer-events: none
+    & > span
+      display: none
+  .tbody-days
+    td
+      &:hover
+        background-color: #FFB5B5
+        color: #FFFFFF
+        border-color: #FFFFFF
+    .in-range
+      background-color: #FFB5B5
+      color: #FFFFFF
+    .today
+      color: $red
+      .end-date
+        color: $red
+        background-color: $grey
+    .active
+      background-color: $red
+      color: #FFFFFF
+    .start-date.end-date
+      border-radius: 0
+  .drp-buttons
+    padding: 30px 0 0
+    border: none
+    text-align: center
+    flex-basis: 100%
+
+@media (max-width: 767px)
+  .daterangepicker
+    &-wrapper
+      flex-direction: column
+    .drp-calendar
+      margin-bottom: 20px
+    .drp-buttons
+      padding-top: 10px
+
+@media (max-width: 430px)
+  .daterangepicker
+    padding: 10px 10px 20px
+    .calendar-table
+      td, th
+        width: 40px
+        height: 36px

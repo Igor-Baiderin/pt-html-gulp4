@@ -1,0 +1,135 @@
+.clients
+  &-inner
+    margin: 120px auto
+    display: flex
+  &-content
+    width: 760px
+  &-wrapper
+    display: none
+    &__title
+      @extend %title-font
+      color: $red
+  &-aside
+    margin-right: 100px
+    width: 400px
+    &__list
+      margin-bottom: 60px
+    &__title
+      color: $red
+    &__link
+      color: $black
+      transition: all 0.3s
+    &__item
+      position: relative
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      padding: 19px 0 22px
+      &:first-child
+        padding-top: 0
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $grey
+        bottom: 0
+        left: 0
+        right: 0
+.questions
+  & .filter__item-drop--active
+    color: $red
+  &__title
+    max-width: 462px
+    margin-bottom: 30px
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &-list
+    margin-bottom: 93px
+    &:last-child
+      margin-bottom: 0
+    &__text
+      display: none
+      margin-top: 22px
+    &__item
+      position: relative
+      padding-top: 30px
+      padding-bottom: 36px
+      &::after
+        position: absolute
+        content: ''
+        height: 1px
+        width: 100%
+        background-color: $grey
+        bottom: 0
+        left: 0
+        right: 0
+    &__title
+      font-weight: 600
+      padding-right: 25px
+      cursor: pointer
+    &__link
+      color: $red
+
+@media (max-width: 1200px)
+  .clients
+    &-inner
+      margin: 70px auto
+    &-aside
+      margin-right: 50px
+  .questions
+    &-list
+      margin-bottom: 50px
+
+@media (max-width: 992px)
+  .clients
+    &-inner
+      margin: 50px auto
+    &-aside
+      display: none
+      &__list
+        display: none
+        margin-bottom: 0
+      &__item
+        &:first-child
+          padding-top: 30px
+        &:last-child
+          padding-bottom: 5px
+          &::after
+            display: none
+    &-wrapper
+      display: block
+      margin-bottom: 50px
+      background-color: #fff
+      box-shadow: 0px 15px 30px rgba(0,0,0,0.06)
+      padding: 17px 25px 18px 45px
+      &__title
+        padding-right: 20px
+        font-size: 20px
+        line-height: 28px
+        border-radius: 10px
+
+@media (max-width: 767px)
+  .clients
+    &-wrapper
+      padding: 17px 25px
+      &__title
+        font-size: 16px
+        line-height: 20px
+    &-aside
+      &__item
+        padding: 14px 0 15px
+        font-size: 16px
+        line-height: 20px
+  .questions
+    &-list
+      &__item
+        padding-bottom: 30px
+        font-size: 13px
+        line-height: 24px
+    &__title
+      max-width: 330px
+      margin-bottom: 0
+      font-size: 26px
+      line-height: 35px

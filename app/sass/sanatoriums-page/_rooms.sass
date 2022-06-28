@@ -1,0 +1,422 @@
+.object-rooms
+  margin-bottom: 120px
+  &--hidden
+    display: none
+  & .rooms
+    &-info
+      margin-top: 10px
+    &__button
+      border: none
+      &--hidden
+        display: none
+    &__item
+      padding-bottom: 20px
+      &:first-child
+        padding-top: 0
+      &-wrapper
+        align-items: center
+    &__img
+      height: 100%
+      &-wrapper
+        height: 235px
+.tariffs
+  margin-top: 30px
+  &--hidden
+    display: none
+  &-info
+    display: flex
+    &__date,
+    &__food
+      margin-right: 30px
+      span
+        color: #898989
+        font-size: 12px
+        line-height: 16px
+    &__food
+      color: #898989
+      font-size: 12px
+      line-height: 16px
+      span
+        font-size: 15px
+        line-height: 26px
+        color: $black
+    &__text
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+    &__people
+      display: block
+      margin-left: 5px
+      &::before
+        display: inline-block
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        height: 15px
+      &[data-people="1"]
+        &::before
+          background-image: url('../images/icons/people/person-1.svg')
+          width: 7px
+      &[data-people="2"]
+        &::before
+          background-image: url('../images/icons/people/person-2.svg')
+          width: 17px
+      &[data-people="3"]
+        &::before
+          background-image: url('../images/icons/people/person-3.svg')
+          width: 27px
+      &[data-people="4"]
+        &::before
+          background-image: url('../images/icons/people/person-4.svg')
+          width: 37px
+      &[data-people="5"]
+        &::before
+          background-image: url('../images/icons/people/person-5.svg')
+          width: 64px
+    &__children
+      display: block
+      margin-left: 3px
+      margin-top: 1px
+      &::after
+        display: inline-block
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        height: 14px
+      &[data-child="1"]
+        &::after
+          background-image: url('../images/icons/people/child-1.svg')
+          width: 11px
+      &[data-child="2"]
+        &::after
+          background-image: url('../images/icons/people/child-2.svg')
+          width: 25px
+      &[data-child="3"]
+        &::after
+          background-image: url('../images/icons/people/child-3.svg')
+          width: 37px
+      &[data-child="4"]
+        &::after
+          background-image: url('../images/icons/people/child-4.svg')
+          width: 51px
+      &[data-child="5"]
+        &::after
+          background-image: url('../images/icons/people/child-5.svg')
+          width: 52px
+    &__wrapper
+      display: flex
+      margin-top: 6px
+      font-size: 12px
+      line-height: 16px
+      color: #898989
+  &-item
+    position: relative
+    margin-bottom: 20px
+    padding: 30px 45px 28px
+    width: 100%
+    background-color: #f3f3f3
+    border-radius: 20px
+    &:first-child
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/polygon.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        width: 25px
+        height: 19px
+        top: -14px
+        left: 20px
+    &__wrapper
+      display: flex
+      justify-content: space-between
+    &__main
+      margin-right: 10px
+      min-width: 455px
+    &__box
+      width: 191px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    &__title
+      @extend %title-font
+      margin-bottom: 5px
+      font-size: 15px
+      line-height: 26px
+      text-align: left
+      &--underline
+        text-decoration: underline
+        cursor: pointer
+        transition: all, 0.3s
+        background-color: transparent
+        border: none
+    &__price
+      margin-bottom: 5px
+      @extend %title-font
+      display: flex
+      align-items: center
+      justify-content: flex-end
+      &--old
+        position: relative
+        font-size: 16px
+        line-height: 28px
+        color: #898989
+        &::after
+          position: absolute
+          content: ''
+          background-color: #898989
+          height: 1px
+          width: 100%
+          left: 0
+          right: 0
+          bottom: 12px
+      &--discount
+        color: $red
+        font-size: 16px
+        line-height: 26px
+    &__details
+      min-width: 184px
+      padding: 3px 60px 5px 15px
+      &-primary
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/arrow-down-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 12px
+          height: 12px
+          right: 15px
+          top: 9px
+      &-secondary
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          background-image: url('../images/icons/arrow-down-white.svg')
+          background-repeat: no-repeat
+          background-size: cover
+          width: 12px
+          height: 12px
+          right: 15px
+          top: 9px
+          transform: rotate(180deg)
+      &--hidden
+        display: none
+    &__bottom
+      display: flex
+      justify-content: space-between
+      align-items: flex-end
+      margin-top: -35px
+    &__button
+      min-width: 176px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      padding: 6px 31px 8px
+  &-tags
+    font-size: 12px
+    line-height: 16px
+    &--mobile
+      display: none
+    &__img
+      border-radius: 50%
+      padding: 3px
+      margin-right: 10px
+    &__item
+      display: flex
+      align-items: center
+      width: max-content
+      &--last
+        color: #FF7C03
+      &--instock
+        color: #29BC26
+      &--request
+        color: #2686BC
+  &-bottom
+    margin-top: 30px
+    &--hidden
+      display: none
+    &__title
+      margin-bottom: 9px
+      font-weight: 600
+    &__list
+      display: inline-block
+      margin-bottom: 25px
+      margin-right: 40px
+      &:last-child
+        margin-right: 0
+    &__item
+      position: relative
+      margin-bottom: 10px
+      padding-left: 40px
+      color: #898989
+      &::before
+        position: absolute
+        content: ''
+        background-color: $red
+        height: 2px
+        width: 20px
+        left: 0
+        bottom: 11px
+    &__text
+      margin-bottom: 35px
+      max-width: 675px
+      color: #898989
+      &--red
+        margin-bottom: 15px
+        font-weight: 600
+        color: $red
+    &__button
+      @extend %title-font
+      font-size: 16px
+      line-height: 28px
+      border: none
+      background-color: transparent
+      border-bottom: 2px dotted black
+      transition: all 0.3s
+
+@media (max-width: 1920px)
+  .object
+    & .rooms__img-wrapper
+      height: 200px
+    & .rooms-info__top
+      margin-bottom: 15px
+    & .rooms-categories__item
+      margin-bottom: 10px
+    & .rooms__item
+      padding: 35px 0
+    & .rooms
+      &__button
+        padding: 10px 30px 12px
+      &__text
+        font-size: 18px
+        line-height: 23px
+      &-info
+        &__top
+          margin-bottom: 10px
+      &__item
+        padding: 15px 0
+      &__img-wrapper
+        height: 150px
+      &-categories
+        margin-bottom: 0
+        &__item
+          margin-bottom: 5px
+  .tariffs
+    &-info
+      &__date,
+      &__food
+        margin-right: 20px
+
+@media (max-width: 1200px)
+  .object
+    &-rooms
+      margin-bottom: 70px
+  .tariffs
+    &-info
+      font-size: 12px
+      &__food
+        span
+          font-size: 12px
+
+@media (max-width: 992px)
+  .tariffs
+    &-info
+      flex-wrap: wrap
+      font-size: 13px
+      line-height: 24px
+      max-width: 470px
+    &-item
+      padding: 20px
+      &__main
+        min-width: auto
+
+@media (max-width: 767px)
+  .tariffs
+    &-tags
+      &__item
+        font-size: 10px
+        line-height: 16px
+    &-bottom
+      font-size: 13px
+      line-height: 24px
+      &__item
+        margin-bottom: 5px
+      &__text
+        margin-bottom: 30px
+  .rooms
+    &__img
+      margin-right: 0
+    &__item
+      padding: 30px 0
+  .object-rooms
+    & .rooms
+      &__img-wrapper
+        height: 200px
+
+@media (max-width: 576px)
+  .tariffs
+    &-bottom
+      margin-top: 15px
+    &-tags
+      display: none
+      &--mobile
+        display: block
+      &__img
+        width: 20px
+        height: 20px
+        margin-right: 8px
+    &-info
+      margin-bottom: 15px
+    &-item
+      &__main
+        margin-right: 0
+      &__wrapper
+        flex-direction: column
+      &__bottom
+        flex-direction: column
+        align-items: flex-start
+        margin-top: 0
+      &__box
+        width: 100%
+        &-wrap
+          margin-top: 35px
+          width: 100%
+          display: flex
+          justify-content: space-between
+          align-items: center
+      &__button
+        width: 100%
+        font-size: 16px
+        line-height: 20px
+      &__details
+        width: 100%
+
+@media (max-width: 450px)
+  .object
+    & .rooms
+      &-info
+        &__bottom
+          flex-direction: column
+          align-items: flex-start
+          gap: 15px
+      &__price
+        margin-top: 10px
+  .object-rooms
+    & .rooms
+      &__button
+        width: 100%
+
+@media (max-width: 420px)
+  .tariffs
+    &-item
+      &__details,
+      &__button
+        width: 100%
+    &-info
+      flex-wrap: wrap
+      &__date,
+      &__food
+        margin-right: 10px

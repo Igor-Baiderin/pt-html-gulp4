@@ -1,0 +1,83 @@
+.banner-corporate
+  &__wrapper
+    position: relative
+    margin: 120px 0 60px
+    background-color: #F7F7F7
+    height: 333px
+    width: 100%
+    overflow: hidden
+    &::after
+      position: absolute
+      content: ''
+      background-image: url('../images/banner-5.png')
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: -450px,center
+      width: 100%
+      height: 100%
+  &__box
+    position: relative
+    margin-top: 60px
+    margin-right: 90px
+    float: right
+    max-width: 330px
+    text-align: left
+    @extend %title-font
+    color: #898989
+    z-index: 2
+  &__title
+    margin-bottom: 35px
+    font-size: 40px
+    line-height: 48px
+  &__text
+    font-size: 20px
+    line-height: 28px
+
+@media (max-width: 1400px)
+  .banner-corporate
+    &__wrapper
+      margin: 70px 0 30px
+
+@media (max-width: 1200px)
+  .banner-corporate
+    &__box
+      margin-top: 50px
+      margin-right: 50px
+      max-width: 290px
+    &__title
+      margin-bottom: 28px
+      font-size: 34px
+      line-height: 40px
+
+@media (max-width: 992px)
+  .banner-corporate
+    &__box
+      float: left
+      margin-left: 50px
+    &__wrapper
+      &::after
+        background-position: center,center
+        width: 300%
+        height: 100%
+        left: 0px
+        top: 0
+
+@media (max-width: 767px)
+  .banner-corporate
+    &__wrapper
+      margin: 50px 0 15px
+    &__title
+      font-size: 26px
+      line-height: 35px
+    &__text
+      font-size: 16px
+      line-height: 20px
+
+@media (max-width: 576px)
+  .banner-corporate
+    &__box
+      margin-top: 32px
+      margin-left: 30px
+    &__title
+      margin-bottom: 20px

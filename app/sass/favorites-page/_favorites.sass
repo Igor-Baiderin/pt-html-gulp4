@@ -1,0 +1,448 @@
+.favorites
+  margin: 120px auto
+  &__amount
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: #898989
+.rooms
+  &__button
+    border: none
+    &--hidden
+      display: none
+  &__item
+    position: relative
+    padding: 50px 0
+    &:first-child
+      padding-top: 60px
+    &::after
+      position: absolute
+      content: ''
+      height: 1px
+      width: 100%
+      background-color: #E4E4E4
+      bottom: 0
+      left: 0
+      right: 0
+    &-wrapper
+      display: flex
+  &__img
+    position: absolute
+    object-fit: cover
+    width: 100%
+    height: 100%
+    z-index: 1
+    &-wrapper
+      min-width: 235px
+      width: 100%
+      height: 271px
+      display: block
+    &-link
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      z-index: 2
+
+  &-favorite
+    &__button
+      position: absolute
+      background-color: transparent
+      border: none
+      outline: none
+      right: 5px
+      top: 5px
+      cursor: pointer
+      z-index: 7
+      &::after
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/favorite.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        height: 24px
+        width: 24px
+        right: 8px
+        top: 8px
+      &--active
+        &::after
+          background-image: url('../images/icons/favorite-notactive.svg')
+  &-info
+    &__top
+      margin-bottom: 35px
+      width: 980px
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+    &__bottom
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__wrapper
+      margin-top: 11px
+    &__box
+      padding: 12px 25px
+      display: flex
+      justify-content: space-between
+      border-radius: 10px
+      background-color: $grey
+    &__nights,
+    &__date
+      margin-right: 30px
+      p
+        &:nth-child(2)
+          font-size: 12px
+          line-height: 16px
+          color: #898989
+    &__people
+      &-wrapper
+        display: flex
+      &-text
+        font-size: 12px
+        line-height: 16px
+        color: #898989
+      &--adult
+        display: block
+        &::before
+          display: inline-block
+          content: ''
+          background-repeat: no-repeat
+          background-size: cover
+          height: 15px
+        &[data-people="1"]
+          &::before
+            background-image: url('../images/icons/people/person-1.svg')
+            width: 7px
+        &[data-people="2"]
+          &::before
+            background-image: url('../images/icons/people/person-2.svg')
+            width: 17px
+        &[data-people="3"]
+          &::before
+            background-image: url('../images/icons/people/person-3.svg')
+            width: 27px
+        &[data-people="4"]
+          &::before
+            background-image: url('../images/icons/people/person-4.svg')
+            width: 37px
+        &[data-people="5"]
+          &::before
+            background-image: url('../images/icons/people/person-5.svg')
+            width: 47px
+      &--children
+        display: block
+        margin-left: 3px
+        margin-top: 1px
+        &::after
+          display: inline-block
+          content: ''
+          background-repeat: no-repeat
+          background-size: cover
+          height: 14px
+        &[data-child="1"]
+          &::after
+            background-image: url('../images/icons/people/child-1.svg')
+            width: 11px
+        &[data-child="2"]
+          &::after
+            background-image: url('../images/icons/people/child-2.svg')
+            width: 25px
+        &[data-child="3"]
+          &::after
+            background-image: url('../images/icons/people/child-3.svg')
+            width: 37px
+        &[data-child="4"]
+          &::after
+            background-image: url('../images/icons/people/child-4.svg')
+            width: 51px
+        &[data-child="5"]
+          &::after
+            background-image: url('../images/icons/people/child-5.svg')
+            width: 52px
+  &__name
+    margin-bottom: 10px
+  &__text
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+  &-categories
+    margin-bottom: 20px
+    display: flex
+    flex-wrap: wrap
+    color: #898989
+    &__item
+      margin-bottom: 15px
+      position: relative
+      margin-right: 25px
+      padding-left: 30px
+      &::before
+        content: ''
+        position: absolute
+        background-repeat: no-repeat
+        background-size: cover
+        width: 20px
+        height: 20px
+        left: 0
+        top: 4px
+      &--bath
+        &::before
+          background-image: url('../images/icons/for-room/bathroom.svg')
+      &--tv
+        &::before
+          background-image: url('../images/icons/for-room/tv.svg')
+      &--wifi
+        &::before
+          background-image: url('../images/icons/for-room/wifi.svg')
+      &--fridge
+        &::before
+          background-image: url('../images/icons/for-room/fridge.svg')
+      &--condition
+        &::before
+          background-image: url('../images/icons/for-room/condition.svg')
+      &--balcony
+        &::before
+          background-image: url('../images/icons/for-room/balcony.svg')
+      &--kitchen
+        &::before
+          background-image: url('../images/icons/for-room/kitchen.svg')
+      &--bed1
+        &::before
+          background-image: url('../images/icons/for-room/bed1.svg')
+      &--bed2
+        padding-left: 50px
+        &::before
+          background-image: url('../images/icons/for-room/bed2.svg')
+          width: 40px
+      &--bed3
+        padding-left: 70px
+        &::before
+          background-image: url('../images/icons/for-room/bed3.svg')
+          width: 60px
+      &--bed4
+        padding-left: 90px
+        &::before
+          background-image: url('../images/icons/for-room/bed4.svg')
+          width: 80px
+      &--smallbed
+        &::before
+          background-image: url('../images/icons/for-room/bed-small.svg')
+      &--bigbed
+        &::before
+          background-image: url('../images/icons/for-room/bed-big.svg')
+      &--sofa
+        &::before
+          background-image: url('../images/icons/for-room/sofa.svg')
+      &--chairbed
+        &::before
+          background-image: url('../images/icons/for-room/chair.svg')
+      &--kettle
+        &::before
+          background-image: url('../images/icons/for-room/kettle.svg')
+      &--dryer
+        &::before
+          background-image: url('../images/icons/for-room/dryer.svg')
+      &--safe
+        &::before
+          background-image: url('../images/icons/for-room/safe.svg')
+      &--room
+        &::before
+          background-image: url('../images/icons/for-room/room.svg')
+      &--bathroom
+        &::before
+          background-image: url('../images/icons/for-room/bathroom.svg')
+      &--microwave
+        &::before
+          background-image: url('../images/icons/for-room/microwave.svg')
+
+  &__price
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    span
+      color: $red
+  &__button
+    padding: 15px 63px 18px
+.img-wrapper
+  margin-right: 45px
+  position: relative
+  border-radius: 20px
+  overflow: hidden
+  width: 100%
+.favorites,
+.object
+  & .rooms
+    &__item
+      padding: 40px 0 20px
+    &-info
+      &__button
+        margin-right: 20px
+        @extend %title-font
+        font-size: 16px
+        line-height: 28px
+        border: none
+        border-bottom: 2px dotted $black
+        background-color: transparent
+        transition: all 0.3s
+      &__description
+        margin-top: 0px
+        padding: 35px 45px
+        border-radius: 20px
+        background-color: $grey
+        &--hidden
+          display: none
+        &-wrap
+          margin-top: 20px
+          overflow: hidden
+          max-height: 0
+          transition: max-height 1s ease
+      &__text
+        color: #898989
+
+@media (max-width: 1400px)
+  .rooms
+    &__item
+      padding: 30px 0
+    &-info
+      &__top
+        width: 100%
+        min-width: 650px
+        margin-bottom: 15px
+    &__img
+      &-wrapper
+        height: 200px
+    &__name
+      margin-bottom: 0
+    &-categories
+      margin-bottom: 15px
+      &__item
+        margin-bottom: 5px
+        font-size: 14px
+    &__button
+      padding: 10px 50px 12px
+  .img
+    &-wrapper
+      width: 100%
+      max-width: 200px
+      height: 100%
+
+@media (max-width: 1200px)
+  .favorites
+    margin: 70px auto
+
+@media (max-width: 992px)
+  .rooms
+    &__button
+      filter: none
+    &__name
+      font-size: 13px
+      line-height: 24px
+    &__text
+      margin-bottom: 20px
+      font-size: 16px
+      line-height: 20px
+    &__img
+      &-wrapper
+        height: 255px
+    &-info
+      &__bottom
+        flex-direction: column
+        align-items: flex-start
+      &__top
+        min-width: 100%
+        flex-direction: column
+        margin-bottom: 15px
+      &__nights,
+      &__date
+        font-size: 13px
+        line-height: 24px
+        p
+          &:nth-child(2)
+            font-size: 10px
+      &__people-text
+        font-size: 10px
+        line-height: 10px
+    &-categories
+      margin-bottom: 5px
+      &__item
+        font-size: 13px
+        line-height: 24px
+    &__price
+      margin-bottom: 25px
+  .img
+    &-wrapper
+      margin-right: 25px
+
+@media (max-width: 767px)
+  .rooms
+    &__item
+      &-wrapper
+        flex-direction: column
+    &__img
+      &-wrapper
+        max-width: 100%
+  .img
+    &-wrapper
+      margin-right: 0
+      max-width: 100%
+  .favorites,
+  .object,
+  .clients-favorites
+    & .rooms
+      &-info
+        &__description
+          padding: 20px
+        &__text
+          font-size: 14px
+          line-height: 20px
+        &__bottom
+          &-wrapper
+            display: flex
+            justify-content: space-between
+            width: 100%
+
+@media (max-width: 500px)
+  .favorites,
+  .object
+    & .rooms
+      &__price
+        margin-bottom: 25px
+      &__details
+        width: max-content
+        margin-bottom: 15px
+      &__button
+        width: 100%
+      &-info
+        &__button
+          margin-top: 15px
+        &__bottom
+          &-wrapper
+            flex-direction: column-reverse
+            align-items: center
+    & .tariffs
+      margin-top: 15px
+
+@media (max-width: 430px)
+  .favorites
+    margin: 46px auto 70px
+  .rooms
+    &__amount
+      font-size: 16px
+      line-height: 20px
+    &__img
+      &-wrapper
+        max-height: 200px
+        margin-bottom: 10px
+    &__item
+      &:first-child
+        padding-top: 45px
+    &-info
+      &__box
+        width: 100%
+      &__nights,
+      &__date
+        margin-right: 10px
+    &__button
+      width: 100%
+  .img
+    &-wrapper
+      max-height: 200px

@@ -1,0 +1,194 @@
+.corporate
+  &-item
+    position: relative
+    display: flex
+    justify-content: space-between
+    padding: 61px 0
+    &::after
+      position: absolute
+      content: ''
+      height: 1px
+      background-color: #E4E4E4
+      width: 100%
+      bottom: 0
+      left: 0
+      right: 0
+    &:last-child
+      padding-bottom: 60px
+      margin-bottom: 120px
+    &__box
+      max-width: 760px
+      &-wrapper
+        position: relative
+        padding-bottom: 60px
+        &::after
+          position: absolute
+          content: ''
+          height: 1px
+          background-color: #E4E4E4
+          width: 100%
+          bottom: 0
+          left: 0
+          right: 0
+        &:last-child
+          padding-top: 60px
+          padding-bottom: 0
+          &::after
+            display: none
+    &__num
+      display: block
+      margin-bottom: 15px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $red
+    &__title
+      margin-right: 20px
+      max-width: 400px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &__text
+      margin-bottom: 26px
+      &:last-child
+        margin-bottom: 0
+      &--bold
+        @extend %title-font
+        font-size: 20px
+        line-height: 28px
+    &__list
+      &-item
+        position: relative
+        margin-bottom: 10px
+        padding-left: 40px
+        &:last-child
+          margin-bottom: 0
+        &::before
+          position: absolute
+          content: ''
+          background-color: $red
+          width: 20px
+          height: 2px
+          left: 0
+          top: 13px
+  &-advantages
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    &__item
+      position: relative
+      max-width: 365px
+      width: 100%
+      padding: 45px 30px 45px 45px
+      background-color: $grey
+      margin-bottom: 30px
+      &:nth-last-child(-n+2)
+        margin-bottom: 0
+      &:last-child
+        cursor: pointer
+      &--big
+        max-width: 100%
+    &__text
+      margin-top: 15px
+      &--big
+        max-width: 190px
+        margin-top: 0
+        @extend %title-font
+        font-size: 30px
+        line-height: 38px
+        text-align: left
+        color: #898989
+    &__button
+      display: flex
+      justify-content: space-between
+      align-items: center
+      background-color: transparent
+      border: none
+      cursor: pointer
+      width: 100%
+
+@media (max-width: 1200px)
+  .corporate
+    &-item
+      &__box
+        max-width: 700px
+    &-advantages
+      &__item
+        max-width: 333px
+        &--big
+          max-width: 100%
+
+@media (max-width: 992px)
+  .corporate
+    &-item
+      flex-direction: column
+      &__title
+        margin-bottom: 22px
+      &--big
+        max-width: 100%
+    &-advantages
+      &__item
+        max-width: 320px
+        &--big
+          max-width: 100%
+
+@media (max-width: 767px)
+  .corporate
+    &-advantages
+      &__item
+        padding: 30px 30px 35px
+        max-width: 260px
+        min-width: 100%
+        &:nth-last-child(-n+2)
+          margin-bottom: 30px
+        &:last-child
+          margin-bottom: 0
+        &--big
+          max-width: 100%
+      &__text
+        font-size: 13px
+        line-height: 24px
+        &--big
+          font-size: 26px
+          line-height: 35px
+    &-item
+      &:last-child
+        margin-bottom: 0
+        &::after
+          display: none
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__text
+        font-size: 13px
+        line-height: 24px
+        margin-bottom: 20px
+      &__box
+        &-wrapper
+          padding-bottom: 50px
+          &:last-child
+            padding-top: 50px
+      &__list
+        &-item
+          font-size: 13px
+          line-height: 24px
+      &__num
+        font-size: 16px
+        line-height: 20px
+
+@media (max-width: 430px)
+  .corporate
+    &-item
+      padding: 50px 0
+      & .main-form__label
+        font-size: 10px
+        line-height: 16px
+      &__title
+        margin-bottom: 22px
+      &__info
+        margin-top: 20px
+    &-advantages
+      &__item
+        margin-bottom: 10px
+        &:nth-last-child(-n+2)
+          margin-bottom: 10px

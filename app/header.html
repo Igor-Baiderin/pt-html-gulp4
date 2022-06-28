@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head itemscope itemtype="http://schema.org/WPHeader">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Premier Tour</title>
+      <meta name="description" content="Премьер тур - официальный представитель санаториев Урала">
+      <meta name="keywords" content="тур, тур оператор, путевка, путевки, горящая путевка, горящие путевки, горящие, туры, отдых, санаторий, санатории, отдых в санатории">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/daterangepicker.css">
+    <link rel="stylesheet" href="css/style.min.css" />
+    <!-- Яндекс.Карты -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=c93a6d43-6bfb-41c6-b83d-23f8a4720abc&lang=ru_RU" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header">
+      <div class="container">
+        <div class="header__top header__top--fixed">
+          <a class="logo" href="index.php">
+            <img class="logo__img" src="images/logo.svg" alt="logo" />
+          </a>
+          <div itemscope itemtype="http://schema.org/Organization" class="header-contacts">
+            <span class="header-contacts__text">Телефон</span>
+            <a itemprop="telephone" href="tel:79128055303" class="header-contacts__phone">+7 (912) 805-53-03</a>
+          </div>
+
+            <div itemscope itemtype="http://schema.org/Organization" class="select-city">
+            <select id="select-style" class="select-style">
+              <option itemprop="addressLocality" value="0">Магнитогорск</option>
+              <option itemprop="addressLocality" value="1">Екатеринбург</option>
+              <option itemprop="addressLocality" value="2">Оренбург</option>
+              <option itemprop="addressLocality" value="3">Уфа</option>
+              <option itemprop="addressLocality" value="4">Челябинск</option>
+            </select>
+            <div id="select-hide0" itemprop="address" class="select-tab">ул. Суворова, дом 114</div>
+            <div id="select-hide1" itemprop="address" class="select-tab select-none">ул. Пушкина, д. 7 Л, оф. 111</div>
+            <div id="select-hide2" itemprop="address" class="select-tab select-none">ул. Чкалова, дом 43а, офис 11</div>
+            <div id="select-hide3" itemprop="address" class="select-tab select-none">ул. Ленина, д. 28, офис 206</div>
+            <div id="select-hide4" itemprop="address" class="select-tab select-none">ул. Цвиллинга, дом 46, офис 902</div>
+          </div>
+
+          <button type="submit" class="header__favorite">
+          <span class="header__favorite-num">13</span> 
+          <button class="header__search">
+          </button>
+
+          <div class="entry-wrapper">
+             <a href="#" class="entry entry-client">
+            <span class="entry-client">Вход для клиентов</span>
+          </a>
+          <a href="#" class="entry entry-agency">
+            <span class="agency-entry__text">Вход для агентств</span>
+          </a>
+          </div>
+          <div class="account-wrapper account-wrapper--hidden">
+            <img src="images/icons/account.svg" alt="icon" class="account__img">
+            <div class="account-box">
+              <div class="account-box__top">
+                <a href="#" class="account__title">Личный кабинет</a>
+                <a href="#" class="account__admin account__admin--hidden">админка</a>
+              </div>
+            <p class="account__name">Самигуллин Д. И.</p>
+            </div>
+          </div>
+
+          <div class="phone-wrapper">
+             <a href="tel:79128055303" class="header-contacts__phone">+7 (912) 805-53-03</a>
+          </div>
+          <button class="header__phone"></button>
+          <button class="entry__button"></button>
+          <button class="header__burger"></button>
+
+        </div>
+        <nav class="header__bottom">
+          <uitemprop="url" l itemscope itemtype="http://schema.org/SiteNavigationElement" class="header-list">
+            <li class="header-list__item">
+              <span class="header-list__link header-list__link--active">Главная</span>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="tour-page.php" class="header-list__link">Подобрать тур</a>
+            </li>
+            <li class="header-list__item header-dropdown">
+              <span class="header-list__link header-dropdown-controller">Вся Россия</span>
+              <ul class="header-drop">
+                <li class="header-drop__item">
+                  <a itemprop="url" href="#" class="header-drop__link">Отдых на курортах Краснодарского края</a>
+                </li>
+                <li class="header-drop__item header-drop__item header-dropdown">
+                  <a itemprop="url" class="header-drop__link header-drop__link--arrow header-dropdown-controller">Абхазия</a>
+                  <ul class="header-drop">
+                    <li class="header-drop__item">
+                      <a itemprop="url" href="#" class="header-drop__link">Сочи</a>
+                      </li>
+                      <li class="header-drop__item">
+                      <a itemprop="url" href="#" class="header-drop__link">Анапа</a>
+                      </li>
+                      <li class="header-drop__item">
+                      <a itemprop="url" href="#" class="header-drop__link">Курорт Геленджик</a>
+                      </li>
+                       <li class="header-drop__item">
+                      <a itemprop="url" href="#" class="header-drop__link">Красная поляна</a>
+                      </li>
+                       <li class="header-drop__item">
+                      <a itemprop="url" href="#" class="header-drop__link">Адлер</a>
+                      </li>
+                  </ul>
+                </li>
+                <li class="header-drop__item">
+                  <a itemprop="url" href="#" class="header-drop__link">Отдых в Крыму</a>
+                </li>
+                <li class="header-drop__item">
+                  <a itemprop="url" href="#" class="header-drop__link">Кавказские Минеральные Воды (Ессентуки, Пятигорск, Кисловодск, Железноводск)</a>
+                </li>
+                 <li class="header-drop__item">
+                  <a itemprop="url" href="#" class="header-drop__link">Санкт-Петербург и Ленинградская область</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="#" class="header-list__link">Санатории Урала и Башкирии</a>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="profiles.php" class="header-list__link">Лечение</a>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="discounts.php" class="header-list__link">Акции</a>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="clients-payment.php" class="header-list__link">Способы оплаты</a>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="clients.php" class="header-list__link">Клиентам</a>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="agency.php" class="header-list__link">Агентствам</a>
+            </li>
+            <li class="header-list__item header-dropdown">
+              <span class="header-list__link header-dropdown-controller">О нас</span>
+              <ul class="header-drop header-drop--small">
+                <li class="header-drop__item">
+                  <a itemprop="url" href="about-company.php" class="header-drop__link">О компании</a>
+                </li>
+                <li class="header-drop__item">
+                  <a itemprop="url" href="contacts.php" class="header-drop__link">Адреса офисов</a>
+                </li>
+                <li class="header-drop__item">
+                  <a itemprop="url" href="corporate-tourism.php" class="header-drop__link">Корпоративным клиентам</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-list__item">
+              <a itemprop="url" href="fss.php" class="header-list__link">ФСС</a>
+            </li>
+          </ul>
+          <div class="header-contacts__wrapper">
+            <div class="header-contacts header-contacts--mobile">
+            <span class="header-contacts__text">Телефон</span>
+            <a href="tel:79128055303" class="header-contacts__phone">+7 (912) 805-53-03</a>
+          </div>
+          <div class="select-city select-city--mobile">
+            <select id="select-style-3" class="select-style">
+              <option value="0">Магнитогорск</option>
+              <option value="1">Екатеринбург</option>
+              <option value="2">Оренбург</option>
+              <option value="3">Уфа</option>
+              <option value="4">Челябинск</option>
+            </select>
+            <div id="select-hid0" class="select-tab">ул. Суворова, дом 114</div>
+            <div id="select-hid1" class="select-tab select-none">ул. Пушкина, д. 7 Л, оф. 111</div>
+            <div id="select-hid2" class="select-tab select-none">ул. Чкалова, дом 43а, офис 11</div>
+            <div id="select-hid3" class="select-tab select-none">ул. Ленина, д. 28, офис 206</div>
+            <div id="select-hid4" class="select-tab select-none">ул. Цвиллинга, дом 46, офис 902</div>
+          </div>
+          </div>
+          <div class="entry-wrapper entry-wrapper--mobile">
+             <a href="#" class="entry entry-client">
+            <span class="entry-client">Вход для клиентов</span>
+          </a>
+          <a href="#" class="entry entry-agency">
+            <span class="agency-entry__text">Вход для агентств</span>
+          </a>
+          </div>
+        </nav>
+         <div class="modal modal-search">
+        <div class="modal-overlay"></div>
+        <div class="modal-dialog modal-search__dialog">
+          <img class="modal-close" src="images/icons/modal-close.svg" alt="" />
+          <h4 class="modal-dialog__title">
+            Поиск по сайту
+          </h4>
+          <form action="" class="modal-form">
+            <div class="input-wrap modal-search__input">
+              <input name="search" type="text" placeholder="Введите запрос ..." autocomplete="on">
+              <button type="submit" class="modal-search__button">
+                <img src="images/icons/search.svg" alt="search" class="modal-search__img">
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </div>
+    </header>
+
+<style>
+  .header-dropdown-controller{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  @media (max-width: 992px){
+    .header-dropdown-controller::after{
+      position: absolute;
+      content: '';
+      background-image: url('./images/icons/arrow-down.svg');
+      background-repeat: no-repeat;
+      width: 12px;
+      height: 12px;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+</style>

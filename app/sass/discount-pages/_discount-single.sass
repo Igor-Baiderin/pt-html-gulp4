@@ -1,0 +1,248 @@
+.discount
+  margin: 120px auto
+  &-form
+    margin-top: 45px
+    padding: 35px 45px 40px
+    min-height: 173px
+    background-color: #fff
+    border-radius: 20px
+    &__title
+      margin-bottom: 15px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+  &-inner
+    display: flex
+    justify-content: space-between
+  &-aside
+    margin-right: 100px
+    min-width: 400px
+  &__text
+    margin-bottom: 60px
+    color: #898989
+  &-content
+    min-width: 760px
+    color: #fff
+  &-item
+    margin-bottom: 30px
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-height: 338px
+    background-color: #F79E1B
+    &:last-child
+      margin-bottom: 0
+    &--yellow
+      background-color: #F79E1B
+    &--green
+      background-color: #4DB45F
+    &--red
+      background-color: #FF5252
+    &--blue
+      background-color: #59D7D7
+    &__img
+      width: 335px
+      object-fit: cover
+    &__box
+      color: #fff
+      flex-basis: 50%
+      padding: 35px 45px 40px 0
+    &__title
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #fff
+    &__text
+      margin-bottom: 30px
+      @extend %title-font
+      font-size: 35px
+      line-height: 40px
+    &__date
+      color: $black
+    &__bottom
+      display: flex
+      align-items: center
+    &__button
+      margin-right: 30px
+      @extend %title-font
+      width: 198px
+      padding-top: 15px
+      padding-bottom: 18px
+      font-size: 16px
+      line-height: 22px
+      border-radius: 10px
+      background-color: #fff
+      color: $black
+      transition: all 0.3s
+      text-align: center
+    &__link
+      width: 110px
+      @extend %title-font
+      font-size: 16px
+      line-height: 28px
+      color: #fff
+      border: none
+      border-bottom: 2px dotted #fff
+      background-color: transparent
+  &-destination
+    margin-bottom: 20px
+    position: relative
+    display: inline-block
+    font-size: 12px
+    line-height: 16px
+    color: inherit
+    padding-left: 31px
+    &::before
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/marker-white.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      left: 0
+      top: 0
+      width: 11px
+      height: 15px
+    &__item
+      color: #fff
+      text-decoration: underline
+      transition: all 0.3s
+      &::after
+        content: ','
+      &:last-child
+        &::after
+          display: none
+  & .tariffs-bottom
+    position: relative
+    margin-bottom: 30px
+    background-color: $grey
+    padding: 30px 37px 40px 45px
+    &::before
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/polygon.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 25px
+      height: 19px
+      left: 20px
+      top: -15px
+    &__title
+      color: $black
+      &--main
+        margin-bottom: 20px
+    &__list
+      margin-right: 20px
+    &__item,
+    &__text
+      font-size: 15px
+      line-height: 26px
+    &__text
+      max-width: 100%
+
+@media (max-width: 1400px)
+  .discount
+    margin: 70px auto
+    &-form
+      & .tour-form__button
+        width: 200px
+    &-content
+      min-width: auto
+    &-aside
+      margin-right: 50px
+      width: 400px
+    &-item
+      align-items: flex-end
+      &__box
+        flex-basis: 45%
+      &__bottom
+        flex-direction: column
+        align-items: start
+      &__button
+        margin-bottom: 10px
+      &__text
+        font-size: 26px
+        line-height: 35px
+
+@media (max-width: 1200px)
+  .discount
+    &-aside
+      margin-right: 30px
+      min-width: auto
+      width: 300px
+    &-form
+      & .tour-form__button
+        width: 134px
+
+@media (max-width: 992px)
+  .discount
+    &-aside
+      display: none
+    &-form
+      & .hero-form__input
+        &--map,
+        &--calendar
+          margin-bottom: 0
+      & .tour-form__button
+        width: 100%
+
+@media (max-width: 767px)
+  .discount
+    &-item
+      &__box
+        padding-right: 25px
+    & .tariffs
+      &-bottom
+        &__button
+          font-size: 14px
+          line-height: 25px
+        &__title
+          margin-top: 0
+        &__text,
+        &__item
+          font-size: 13px
+          line-height: 23px
+
+@media (max-width: 576px)
+  .discount
+    margin: 50px auto
+    &__text
+      margin-bottom: 50px
+    &-item
+      flex-direction: column
+      align-items: center
+      &__box
+        padding: 0 30px 30px 30px
+      &__img
+        width: 280px
+        height: 220px
+      &__title
+        margin-top: 10px
+        font-size: 16px
+        line-height: 20px
+      &__text
+        margin-bottom: 20px
+      &__button
+        margin-right: 0
+        width: 100%
+    &-form
+      padding: 35px 20px
+      &__title
+        margin-bottom: 25px
+        font-family: 'Open Sans', sans-serif
+        font-weight: 400
+        font-size: 13px
+        line-height: 24px
+        color: #898989
+    &-destination
+      font-size: 10px
+      line-height: 16px
+    & .tariffs-bottom
+      padding: 20px
+
+@media (max-width: 430px)
+  .discount
+    &-item
+      align-items: flex-start
+      &__box
+        width: 100%

@@ -1,0 +1,155 @@
+
+@media (min-width: 993px)
+  .entry:hover
+    background-color: $red
+    color: #fff
+  .entry.entry-client:hover::before
+    background-image: url('../images/icons/client-white.svg')
+  .entry.entry-agency:hover::before
+    background-image: url('../images/icons/agent-white.svg')
+  .jq-selectbox__dropdown
+    li:hover
+      color: $red
+  .header
+    &__search:hover
+      background-color: $red
+    &__favorite:hover
+      background-color: $red
+    &__favorite:hover::before
+      background-image: url('../images/icons/heart-white.svg')
+    &__search:hover::before
+      background-image: url('../images/icons/search-white.svg')
+    &-list
+      &__link:hover
+        color: $red
+    &-drop
+      &__link:hover
+        color: $red
+  // .header-list__item:hover .header-drop
+  //   visibility: hidden
+  //   opacity: 0
+  nav li:hover > .header-drop
+    transform: rotateX(0deg)
+    visibility: visible
+    opacity: 1
+  .header-drop__item:hover .submenu
+    display: block
+  .button--red:hover
+    filter: drop-shadow(0px 10px 15px rgba(224, 41, 42, 0.3))
+    background-color: #AA1E1F
+  .link-text:hover,
+  .profiles-item__link:hover,
+  .review__button:hover,
+  .news-content__title:hover,
+  .catalog-item__title:hover,
+  .catalog-item__links--region:hover,
+  .catalog-item__links--state:hover,
+  .catalog-item__links--object:hover,
+  .tariffs-bottom__button:hover,
+  .treatment-aside__item:hover,
+  .clients-aside__link:hover,
+  .agency-nav__link:hover,
+  .booking-confirmation__payment:hover,
+  .submenu__link:hover,
+  .region-label:hover,
+  .sanatoriums-label:hover,
+  .redaction-form__label:hover,
+  .rooms-info__button:hover,
+  .questions-list__title:hover,
+  .payment-list__title:hover,
+  .tariffs-item__title--underline:hover,
+  .object-address__link:hover
+    color: $red
+  .link--grey:hover
+    background-color: #898989
+    color: #fff
+  .footer-social__link:hover
+    background-color: $red
+  .best-card__img:hover::after,
+  .popular-card:hover::after,
+  .company-gallery__item:hover::after,
+  .catalog-item__img:hover::after,
+  .news-card__wrapper:hover::after
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    background-color: rgba(30, 30, 30, 0.6)
+    bottom: 0
+    top: 0
+    right: 0
+    left: 0
+    z-index: 2
+  .best-card__img:hover::before,
+  .company-gallery__item:hover::before,
+  .catalog-item__img:hover::before,
+  .news-card__wrapper:hover::before
+    position: absolute
+    content: ''
+    background-image: url('../images/icons/plus.svg')
+    background-repeat: no-repeat
+    width: 45px
+    height: 45px
+    z-index: 3
+    bottom: 50%
+    right: 50%
+    transform: translate(50%, 50%)
+  .popular-card:hover::before
+    position: absolute
+    content: ''
+    background-image: url('../images/icons/plus.svg')
+    background-repeat: no-repeat
+    width: 45px
+    height: 45px
+    z-index: 2
+    bottom: 15%
+    right: 9%
+    z-index: 3
+  .social__link:hover,
+  .contacts-list__item:hover
+    background-color: $red
+    color: #fff
+    & .contacts-list__city
+      color: #fff
+      &::before
+        background-image: url('../images/icons/marker-white.svg')
+    & .contacts-list__call
+      color: #fff
+    & .contacts-list__img
+      display: none
+  .button--grey:hover
+    background-color: $black
+  .button--green:hover
+    background-color: #157913
+  .pagination-list__item a:hover
+    color: $red
+    &::after
+      position: absolute
+      content: ''
+      width: 100%
+      height: 2px
+      background-color: $red
+      bottom: 0
+      left: 0
+      right: 0
+  .aside-filter__content-label:hover,
+  .catalog-item__document:hover
+    color: $red
+    text-decoration: underline
+  .table-paid__price:hover
+    .table-paid__mark
+      display: block
+      width: 100%
+      height: 100%
+      background-color: #898989
+      border-radius: 5px
+      bottom: 0
+      min-width: 120px
+      right: 0
+  .search-list__text:hover
+    color: $red
+    text-decoration: underline
+  .input-wrap:focus-within
+    border: 2px solid #E0292A
+  .catalog-more:hover::before
+    background-image: url('../images/icons/plus-small-white.svg')

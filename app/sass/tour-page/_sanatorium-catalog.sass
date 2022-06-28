@@ -1,0 +1,511 @@
+.sanatoriums
+  &-wrapper
+    margin: 120px auto
+  &__text
+    margin-bottom: 26px
+    &:last-child
+      margin-bottom: 0
+.catalog
+  &__inner
+    margin-top: 120px
+    display: flex
+    &-aside
+      width: 400px
+      margin-right: 100px
+    &-wrapper
+      width: 760px
+    &-top
+      display: flex
+      justify-content: space-between
+      margin-bottom: 60px
+  &__num
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    color: #898989
+  &-item
+    position: relative
+    padding-bottom: 50px
+    margin-top: 50px
+    transition: all 0.3s
+    &:first-child
+      padding-top: 0
+    &::after
+      position: absolute
+      content: ''
+      height: 1px
+      width: 100%
+      background-color: #e4e4e4
+      bottom: 0
+      left: 0
+      right: 0
+    &--new
+      &::before
+        position: absolute
+        content: 'new'
+        background-color: #29BC26
+        color: #fff
+        @extend %title-font
+        font-size: 14px
+        line-height: 23px
+        top: 0
+        left: 0
+        border-radius: 20px 0 20px 0
+        width: 74px
+        height: 29px
+        text-align: center
+        z-index: 1
+    &--hit
+      &::before
+        position: absolute
+        content: 'хит'
+        background-color: $red
+        color: #fff
+        @extend %title-font
+        font-size: 14px
+        line-height: 23px
+        top: 0
+        left: 0
+        border-radius: 20px 0 20px 0
+        width: 74px
+        height: 29px
+        text-align: center
+        z-index: 1
+    &--discount
+      &::before
+        position: absolute
+        content: 'акция'
+        background-color: #2972E0
+        color: #fff
+        @extend %title-font
+        font-size: 14px
+        line-height: 23px
+        top: 0
+        left: 0
+        border-radius: 20px 0 20px 0
+        width: 74px
+        height: 29px
+        text-align: center
+        z-index: 1
+    &__document
+      margin-top: 20px
+      position: relative
+      padding-left: 31px
+      font-size: 12px
+      line-height: 16px
+      display: block
+      color: inherit
+      transition: all 0.3s
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/document.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        left: 0
+        bottom: 0
+        width: 16px
+        height: 18px
+    &__categories
+      display: flex
+      flex-wrap: wrap
+    &__category
+      margin-bottom: 5px
+      margin-right: 25px
+      position: relative
+      padding-left: 30px
+      &:last-child
+        margin-bottom: 0
+        margin-right: 0
+      &::before
+        position: absolute
+        content: ''
+        background-repeat: no-repeat
+        background-size: cover
+        width: 20px
+        height: 20px
+        left: 0
+        top: 3px
+      &--openpool
+        &::before
+          background-image: url('../images/icons/for-objects/pool-open.svg')
+          top: 0
+      &--bar
+        &::before
+          background-image: url('../images/icons/for-objects/bar.svg')
+      &--beach
+        &::before
+          background-image: url('../images/icons/for-objects/beach.svg')
+      &--mineral
+        &::before
+          background-image: url('../images/icons/for-objects/mineral.svg')
+      &--dirt
+        &::before
+          background-image: url('../images/icons/for-objects/dirt.svg')
+      &--building
+        &::before
+          background-image: url('../images/icons/for-objects/building.svg')
+      &--matsesta
+        &::before
+          background-image: url('../images/icons/for-objects/matsesta.svg')
+      &--family
+        &::before
+          background-image: url('../images/icons/for-objects/family.svg')
+      &--hamam
+        &::before
+          background-image: url('../images/icons/for-objects/hamam.svg')
+      &--gym
+        &::before
+          background-image: url('../images/icons/for-objects/gym.svg')
+      &--spa
+        &::before
+          background-image: url('../images/icons/for-objects/spa.svg')
+      &--child
+        &::before
+          background-image: url('../images/icons/for-objects/child.svg')
+      &--club
+        &::before
+          background-image: url('../images/icons/for-objects/club.svg')
+      &--bbq
+        &::before
+          background-image: url('../images/icons/for-objects/bbq.svg')
+      &--conference
+        &::before
+          background-image: url('../images/icons/for-objects/conference.svg')
+      &--ski
+        &::before
+          background-image: url('../images/icons/for-objects/ski.svg')
+      &--poolclose
+        &::before
+          background-image: url('../images/icons/for-objects/pool-close.svg')
+    &__text
+      margin-top: 27px
+      margin-bottom: 27px
+      color: #898989
+    &__wrapper
+      display: flex
+      margin-bottom: 40px
+    &__top
+      display: flex
+      justify-content: space-between
+    &__img
+      position: relative
+      margin-right: 45px
+      min-width: 235px
+      width: 235px
+      height: 235px
+      border-radius: 20px
+      overflow: hidden
+      img
+        height: 100%
+        width: 100%
+        object-fit: cover
+    &__title
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      transition: all 0.3s
+      color: inherit
+    &__destinations
+      position: relative
+      display: inline-block
+      font-size: 12px
+      line-height: 16px
+      color: inherit
+      padding-left: 31px
+      &::before
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/marker.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        left: 0
+        top: 0
+        width: 11px
+        height: 15px
+    &__destination
+      color: inherit
+      text-decoration: underline
+      transition: all 0.3s
+      &::after
+        content: ','
+      &:last-child
+        &::after
+          display: none
+    &__bottom
+      display: flex
+      justify-content: space-between
+      align-items: center
+    &__cost
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: #898989
+      span
+        color: $red
+    &__link
+      padding: 15px 46px 18px
+      font-size: 16px
+      line-height: 22px
+.tour
+  &-info
+    margin-top: 120px
+.filter
+  &__item
+    &-drop
+      position: relative
+      &::after
+        position: absolute
+        content: ''
+        background-image: url('../images/icons/arrow-down.svg')
+        background-repeat: no-repeat
+        background-size: cover
+        right: 0
+        top: 8px
+        width: 13px
+        height: 8px
+        transform: rotate(180deg)
+      &--active
+        &::after
+          transform: rotate(0deg)
+.aside-filter
+  &__button
+    display: none
+    position: relative
+    padding: 17px 67px 17px 70px
+    border: none
+    &::before
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/filter.svg')
+      width: 20px
+      height: 20px
+      left: 20px
+      bottom: 15px
+  &__item
+    &-drop
+      margin-bottom: 60px
+    &-title
+      cursor: pointer
+      padding-right: 30px
+      margin-bottom: 13px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+  &__content
+    &-box
+      position: relative
+      display: flex
+      justify-content: space-between
+      align-items: center
+      padding: 22px 0
+      &::after
+        position: absolute
+        content: ''
+        background-color: #e4e4e4
+        height: 1px
+        width: 100%
+        bottom: 0
+        left: 0
+        right: 0
+    &-label
+      margin: 0 16px
+      cursor: pointer
+      transition: all, 0.3s
+      &--active
+        color: $red
+    &-num
+      font-size: 12px
+      line-height: 22px
+      color: #898989
+  & .jq-checkbox
+    height: 14px
+    width: 14px
+    border-radius: 4px
+    background-color: #e4e4e4
+    left: -15px
+  & .jq-checkbox.checked::after
+    background-image: url('../images/icons/checked-black.svg')
+    width: 10px
+    height: 10px
+    top: 2px
+    left: 2px
+  &__reset
+    padding: 17px
+    width: 100%
+    border: none
+    margin-bottom: 45px
+    margin-right: auto
+    margin-left: auto
+.pagination
+  margin-top: 80px
+  width: 225px
+  margin-bottom: 120px
+  &--hidden
+    display: none
+  &-list
+    display: flex
+    justify-content: center
+    justify-content: space-between
+    &__item
+      font-weight: 600
+      a
+        position: relative
+        color: inherit
+      &.active
+        color: $red
+.catalog-sanatorium
+  & .tariffs
+    &-info
+      &__date,
+      &__food
+        margin-right: 15px
+.tags
+  display: none
+
+@media (max-width: 1920px)
+  .catalog
+    &__inner
+      &-aside
+        margin-right: 40px
+        width: 100%
+        max-width: 333px
+      &-wrapper
+        width: 100%
+  .tour
+    &-info
+      margin-top: 70px
+  .aside
+    &-filter
+      &__content
+        &-label
+          font-size: 14px
+          line-height: 20px
+
+@media (max-width: 1200px)
+  .tour
+    &-info
+      margin-bottom: 70px
+  .catalog
+    &-item
+      &__category
+        margin-right: 10px
+        font-size: 13px
+        line-height: 24px
+      &__text
+        font-size: 13px
+        line-height: 24px
+  .aside
+    &-filter
+      &__item
+        &-title
+          font-size: 17px
+          line-height: 25px
+
+@media (max-width: 992px)
+  .sanatoriums
+    &-wrapper
+      display: none
+  .catalog
+    &__num
+      font-size: 16px
+      line-height: 20px
+    &__link
+      font-size: 16px
+      line-height: 20px
+    &__inner
+      flex-direction: column
+      margin-top: 70px
+      &-aside
+        max-width: 100%
+      &-wrapper
+        width: 100%
+  .aside
+    &-filter
+      &__reset
+        width: 320px
+        display: block
+      &__wrapper
+        display: none
+        &--visible
+          display: block
+      &__button
+        display: block
+        margin-bottom: 45px
+        margin-right: auto
+        margin-left: auto
+      &__content
+        display: none
+      &__item-drop
+        &:last-child
+          margin-bottom: 30px
+
+@media (max-width: 767px)
+  .catalog
+    &-item
+      margin-top: 45px
+      &__wrapper
+        flex-direction: column
+        margin-bottom: 30px
+      &__img
+        width: 100%
+        margin-bottom: 20px
+      &__title
+        font-size: 16px
+        line-height: 20px
+      &__text
+        margin-top: 20px
+        margin-bottom: 20px
+      &__bottom
+        flex-direction: column
+      &__cost
+        margin-bottom: 20px
+  .tour
+    &-info
+      &__text,
+      &__item
+        font-size: 13px
+        line-height: 24px
+      &__title
+        margin: 50px 0 30px
+        font-size: 16px
+        line-height: 20px
+      &__text
+        &:last-child
+          margin-bottom: 0
+
+@media (max-width: 576px)
+  .tour
+    &-info
+      padding-top: 0
+  .aside
+    &-filter
+      &__button
+        margin-bottom: 25px
+      &__content
+        &-box
+          padding: 7px 0
+        &-label
+          font-size: 14px
+          line-height: 17px
+      &__item
+        &-drop
+          margin-bottom: 15px
+        &-title
+          font-size: 16px
+          line-height: 20px
+
+@media (max-width: 420px)
+  .aside
+    &-filter
+      &__button
+        padding: 17px
+        width: 100%
+      &__reset
+        width: 100%
+
+@media (max-width: 352px)
+  .catalog
+    &__link
+      font-size: 14px
+      line-height: 18px

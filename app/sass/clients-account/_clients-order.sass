@@ -1,0 +1,316 @@
+.breadcrumbs
+  position: relative
+  &-client
+    position: absolute
+    padding: 43px 45px 47px
+    width: 365px
+    border-radius: 10px
+    background-color: #fff
+    @extend %title-font
+    font-size: 20px
+    line-height: 28px
+    top: 25%
+    right: 17.5%
+    &__name
+      margin-bottom: 15px
+    &__bottom
+      display: flex
+      justify-content: space-between
+    &__bonus
+      color: #29BC26
+      &--nobonus
+        color: #898989
+      &--hidden
+        display: none
+    &__button
+      border: none
+      background-color: transparent
+      color: $red
+.clients-noorder
+  &--hidden
+    display: none
+.clients-order
+  &__list
+    &--hidden
+      display: none
+  &__top
+    margin-bottom: 60px
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &__title
+    @extend %title-font
+    font-size: 40px
+    line-height: 48px
+  &__check
+    padding: 16px
+    width: 321px
+    text-align: center
+  &__box
+    position: relative
+    padding: 45px
+    background-color: #FFF5F5
+    border-radius: 20px
+    &::after
+      position: absolute
+      content: ''
+      background-image: url('../images/icons/cloud-red.svg')
+      background-repeat: no-repeat
+      background-size: cover
+      width: 150px
+      height: 150px
+      right: 45px
+      top: 27px
+    &-title
+      margin-bottom: 25px
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+      color: $red
+    &-text
+      @extend %title-font
+      font-size: 20px
+      line-height: 28px
+    &-link
+      display: inline-block
+      text-align: center
+      padding: 15px 15px 18px
+      width: 202px
+  & .rooms
+    &--last
+      margin-top: 43px
+      opacity: 0.5
+      & .rooms__img
+        &::before
+          display: none
+    &__item
+      padding-bottom: 25px
+      &-wrapper
+        align-items: flex-start
+      &-date
+        margin-bottom: 50px
+        display: block
+        @extend %title-font
+        font-size: 20px
+        line-height: 28px
+    &__button
+      width: 169px
+      padding: 15px
+      &--disabled
+        background-color: #898989
+        border-radius: 10px
+        @extend %title-font
+        font-size: 16px
+        line-height: 22px
+        color: #fff
+        cursor: auto
+    &__details
+      @extend %title-font
+      font-size: 16px
+      line-height: 28px
+      color: #29BC26
+      background-color: transparent
+      border: none
+      border-bottom: 2px dotted #29BC26
+      cursor: pointer
+    &__text
+      margin-bottom: 20px
+    &__img
+      position: absolute
+      width: 100%
+      height: 100%
+      object-fit: cover
+      z-index: 1
+      &::after
+        display: none
+      &-wrapper
+        position: relative
+        margin-top: 10px
+        width: 235px
+        height: 239px
+        &__link
+          position: absolute
+          width: 100%
+          height: 100%
+          z-index: 3
+      &--confirmed
+        &::before
+          position: absolute
+          content: 'Подтверждено'
+          @extend %title-font
+          background-color: #29BC26
+          color: #fff
+          font-size: 14px
+          line-height: 23px
+          top: 0
+          left: 0
+          border-radius: 20px 0 20px 0
+          width: 154px
+          height: 29px
+          text-align: center
+          z-index: 3
+      &--noconfirmed
+        &::before
+          position: absolute
+          content: 'ожидает подтверждения'
+          @extend %title-font
+          background-color: #E0BC3C
+          color: #fff
+          font-size: 14px
+          line-height: 23px
+          top: 0
+          left: 0
+          border-radius: 20px 0 20px 0
+          width: 198px
+          height: 29px
+          text-align: center
+          z-index: 3
+    &-info
+      &__wrapper
+        margin-top: 0
+      &__top
+        margin-bottom: 24px
+        width: auto
+        display: block
+      &__description
+        margin-top: 0
+        padding: 35px 45px
+        border-radius: 20px
+        background-color: $grey
+        &--hidden
+          display: none
+        &-wrap
+          margin-top: 20px
+          overflow: hidden
+          max-height: 0
+          transition: max-height 1s ease
+      &__text
+        color: #898989
+  & .tariffs
+    &-bottom
+      margin-top: 0
+      &__text
+        &:last-child
+          margin-bottom: 0
+
+@media (max-width: 1400px)
+  .breadcrumbs
+    &-client
+      top: 16%
+      right: 8%
+  .rooms
+    &-info
+      &__top
+        min-width: auto
+      &__bottom
+        flex-wrap: wrap
+  .clients-order
+    & .rooms
+      &__details
+        order: 3
+      &__item
+        padding-bottom: 20px
+        &:first-child
+          padding-top: 50px
+    &__top
+      margin-bottom: 0
+
+@media (max-width: 1200px)
+  .clients-order
+    & .rooms
+      &__img
+        margin-right: 25px
+      &__details
+        font-size: 14px
+        line-height: 20px
+      &__button
+        width: 160px
+    & .tariffs
+      &-info
+        &__date,
+        &__nights
+          margin-right: 10px
+
+@media (max-width: 992px)
+  .breadcrumbs
+    &--client
+      padding-bottom: 170px
+    &-client
+      padding: 16px 20px
+      font-size: 12px
+      line-height: 20px
+      top: auto
+      right: auto
+      bottom: 49px
+  .clients-order
+    & .rooms
+      &-info
+        &__bottom
+          flex-direction: row
+      &__button
+        flex-basis: 50%
+      &__item
+        &-wrapper
+          align-items: center
+
+@media (max-width: 767px)
+  .clients-order
+    &__title
+      font-size: 26px
+      line-height: 35px
+    & .rooms
+      &__item
+        &-date
+          font-size: 16px
+          line-height: 20px
+      &__img
+        &-wrapper
+          width: 100%
+      &-info
+        &__description
+          padding: 25px
+          font-size: 14px
+          line-height: 22px
+      &__item
+        &-wrapper
+          align-items: flex-start
+      &__name
+        margin: 5px auto
+
+@media (max-width: 576px)
+  .breadcrumbs
+    &-client
+      width: 320px
+  .clients-order
+    &__top
+      flex-direction: column
+      align-items: flex-start
+      margin-bottom: 25px
+    &__title
+      margin-bottom: 20px
+    &__check
+      width: 100%
+    &__box
+      text-align: center
+      padding-top: 120px
+      &::after
+        width: 80px
+        height: 80px
+        right: 50%
+        transform: translateX(50%)
+      &-title
+        font-size: 16px
+        line-height: 20px
+      &-text
+        font-size: 16px
+        line-height: 20px
+    & .tariffs
+      &-info
+        &__date,
+        &__nights
+          margin-right: 30px
+
+@media (max-width: 360px)
+  .breadcrumbs
+    &-client
+      width: 270px
